@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support & FAQ – NutriTrace</title>
+  <meta name="description" content="Get help with NutriTrace. Browse our FAQ or contact our support team." />
+  <meta name="author" content="Alexandre Zanaty" />
+  <link rel="canonical" href="https://nutritrace.app/support.html" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:       #2d6a2d;
+      --green-dark:  #1b4d1b;
+      --green-mid:   #3a8a3a;
+      --green-light: #e8f5e9;
+      --green-pale:  #f4fbf4;
+      --accent:      #ff8f00;
+      --text:        #1a2e1a;
+      --text-2:      #4a6349;
+      --muted:       #6b8f6b;
+      --border:      #c8e6c9;
+      --bg:          #f7faf7;
+      --white:       #ffffff;
+      --radius:      14px;
+      --shadow:      0 4px 24px rgba(45,106,45,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* ─── LANG PANELS ─── */
+    .lp-block { display: none; }
+    .lp-block.active { display: block; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.25rem; font-weight: 800; color: var(--green);
+      text-decoration: none; letter-spacing: -0.3px;
+    }
+    .nav-logo span { font-size: 1.5rem; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: var(--text-2); text-decoration: none;
+      font-size: 0.9rem; font-weight: 600; transition: color 0.18s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+
+    .lang-pills {
+      display: flex; gap: 4px;
+      background: var(--green-light);
+      border-radius: 24px; padding: 3px;
+    }
+    .lang-pill {
+      border: none; background: transparent;
+      color: var(--green); font-size: 0.78rem; font-weight: 700;
+      padding: 4px 11px; border-radius: 20px; cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+    .lang-pill.active { background: var(--green); color: var(--white); }
+    .lang-pill:hover:not(.active) { background: rgba(45,106,45,0.15); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      background: linear-gradient(155deg, var(--green-dark) 0%, var(--green) 60%, var(--green-mid) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 900; margin-bottom: 12px; letter-spacing: -0.4px; }
+    .page-header p { font-size: 1rem; opacity: 0.85; max-width: 480px; margin: 0 auto; }
+
+    /* ─── CONTENT ─── */
+    .content-wrap { max-width: 820px; margin: 0 auto; padding: 56px 24px 80px; }
+
+    /* ─── QUICK LINKS ─── */
+    .quick-links {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px; margin-bottom: 48px;
+    }
+    .quick-link {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px 18px;
+      text-align: center; text-decoration: none;
+      box-shadow: var(--shadow); transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .quick-link:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(45,106,45,0.15); }
+    .quick-link .ql-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .quick-link .ql-title { font-size: 0.9rem; font-weight: 700; color: var(--green); }
+    .quick-link .ql-sub { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+    /* ─── FAQ ─── */
+    .faq-section-title {
+      font-size: 1.3rem; font-weight: 800; color: var(--green);
+      margin-bottom: 16px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    .faq-group { margin-bottom: 40px; }
+
+    .faq-item {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius); margin-bottom: 10px;
+      overflow: hidden; box-shadow: 0 2px 8px rgba(45,106,45,0.06);
+    }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+      padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.97rem; font-weight: 700; color: var(--text);
+      transition: background 0.15s;
+    }
+    .faq-q:hover { background: var(--green-pale); }
+    .faq-q .faq-arrow {
+      font-size: 0.75rem; color: var(--green);
+      transition: transform 0.25s; flex-shrink: 0; margin-left: 12px;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      font-size: 0.94rem; color: var(--text-2);
+    }
+    .faq-item.open .faq-a { max-height: 600px; padding: 0 20px 18px; }
+    .faq-a p { margin-bottom: 8px; }
+    .faq-a ul { margin: 6px 0 8px 20px; }
+    .faq-a li { margin-bottom: 4px; }
+    .faq-a a { color: var(--green); }
+    .faq-a strong { color: var(--text); }
+
+    /* ─── CONTACT ─── */
+    .contact-section {
+      background: linear-gradient(135deg, var(--green-light) 0%, #d4edda 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 40px 36px;
+      margin-top: 48px; text-align: center;
+    }
+    .contact-section h2 { font-size: 1.4rem; font-weight: 800; color: var(--green); margin-bottom: 10px; }
+    .contact-section p { color: var(--text-2); font-size: 0.97rem; margin-bottom: 24px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+    .contact-form { max-width: 520px; margin: 0 auto; text-align: left; }
+    .form-row { margin-bottom: 16px; }
+    .form-row label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .form-row input, .form-row select, .form-row textarea {
+      width: 100%; padding: 12px 14px;
+      border: 1.5px solid var(--border); border-radius: 10px;
+      font-size: 0.94rem; color: var(--text);
+      background: var(--white); outline: none;
+      transition: border-color 0.18s;
+      font-family: inherit;
+    }
+    .form-row input:focus, .form-row select:focus, .form-row textarea:focus { border-color: var(--green); }
+    .form-row textarea { resize: vertical; min-height: 120px; }
+
+    .btn-submit {
+      width: 100%; background: var(--green); color: var(--white);
+      border: none; border-radius: 12px; padding: 14px;
+      font-size: 1rem; font-weight: 700; cursor: pointer;
+      transition: background 0.18s, transform 0.15s;
+    }
+    .btn-submit:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+    .contact-note { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 12px; }
+    .contact-direct { margin-top: 16px; text-align: center; font-size: 0.88rem; color: var(--text-2); }
+    .contact-direct a { color: var(--green); font-weight: 700; }
+
+    /* ─── RTL ─── */
+    [dir="rtl"] .faq-q { text-align: right; flex-direction: row-reverse; }
+    [dir="rtl"] .faq-q .faq-arrow { margin-left: 0; margin-right: 12px; }
+    [dir="rtl"] .faq-a ul { margin-right: 20px; margin-left: 0; }
+    [dir="rtl"] .footer-inner { direction: rtl; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 40px 24px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 10px; }
+    .footer-brand .logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 800; color: var(--white); }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.5; }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: 1100px; margin: 28px auto 0;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+      font-size: 0.8rem;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .contact-section { padding: 28px 20px; }
+    }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 16px 24px; flex-direction: column; gap: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text-2); text-decoration: none; font-weight: 600; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span>🥗</span> NutriTrace
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#features" class="lp-block active" id="nav-features-en">Features</a><a href="index.html#features" class="lp-block" id="nav-features-fr">Fonctionnalités</a><a href="index.html#features" class="lp-block" id="nav-features-ar">المميزات</a></li>
+    <li><a href="index.html#pricing" class="lp-block active" id="nav-pricing-en">Pricing</a><a href="index.html#pricing" class="lp-block" id="nav-pricing-fr">Tarifs</a><a href="index.html#pricing" class="lp-block" id="nav-pricing-ar">الأسعار</a></li>
+    <li><a href="support.html" class="lp-block active" id="nav-support-en">Support</a><a href="support.html" class="lp-block" id="nav-support-fr">Assistance</a><a href="support.html" class="lp-block" id="nav-support-ar">الدعم</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-pills">
+      <button class="lang-pill active" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" onclick="setLang('fr')">FR</button>
+      <button class="lang-pill" onclick="setLang('ar')">AR</button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="index.html#features">Features</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+</div>
+
+<!-- ════════════════════════════════════════════
+     ENGLISH
+════════════════════════════════════════════ -->
+<div class="lp-block active" id="lang-en">
+
+  <div class="page-header">
+    <h1>Support & FAQ</h1>
+    <p>Find quick answers or reach out to us directly — we're here to help.</p>
+  </div>
+
+  <div class="content-wrap">
+
+    <!-- Quick links -->
+    <div class="quick-links">
+      <a class="quick-link" href="#en-faq-subscription">
+        <div class="ql-icon">💳</div>
+        <div class="ql-title">Subscription</div>
+        <div class="ql-sub">Cancel, billing, restore</div>
+      </a>
+      <a class="quick-link" href="#en-faq-credits">
+        <div class="ql-icon">⭐</div>
+        <div class="ql-title">Credits</div>
+        <div class="ql-sub">Purchasing & usage</div>
+      </a>
+      <a class="quick-link" href="#en-faq-account">
+        <div class="ql-icon">👤</div>
+        <div class="ql-title">Account</div>
+        <div class="ql-sub">Login, delete, data</div>
+      </a>
+      <a class="quick-link" href="#en-faq-features">
+        <div class="ql-icon">🥗</div>
+        <div class="ql-title">Features</div>
+        <div class="ql-sub">AI recipes, scanning</div>
+      </a>
+      <a class="quick-link" href="#en-contact">
+        <div class="ql-icon">✉️</div>
+        <div class="ql-title">Contact Us</div>
+        <div class="ql-sub">Email our team</div>
+      </a>
+    </div>
+
+    <!-- Subscription FAQ -->
+    <div class="faq-group" id="en-faq-subscription">
+      <div class="faq-section-title">💳 Subscription</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I cancel my Premium subscription?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>To cancel your NutriTrace Premium subscription:</p>
+          <ul>
+            <li>Open the <strong>Settings</strong> app on your iPhone</li>
+            <li>Tap your <strong>name</strong> at the top</li>
+            <li>Tap <strong>Subscriptions</strong></li>
+            <li>Select <strong>NutriTrace</strong> and tap <strong>Cancel Subscription</strong></li>
+          </ul>
+          <p>Your Premium access continues until the end of the current billing period. We do not process refunds for unused time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I restore my Premium subscription on a new device?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Sign in to NutriTrace with the <strong>same Apple ID</strong> you used to purchase Premium. Your subscription will be automatically restored.</p>
+          <p>If it doesn't restore automatically, go to the <strong>Profile</strong> tab in the app and tap <strong>"Restore Purchases."</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          I was charged but my subscription isn't active. What do I do?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>First, try <strong>Restore Purchases</strong> in the Profile tab. If that doesn't work:</p>
+          <ul>
+            <li>Make sure you're signed in with the correct Apple ID</li>
+            <li>Check that your subscription is active in Settings → [Name] → Subscriptions</li>
+            <li>If the issue persists, contact us at <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> with your Apple receipt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I get a refund for my subscription?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>All purchases go through Apple's App Store. We cannot process refunds directly. To request a refund, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> and select the NutriTrace subscription charge.</p>
+          <p>Apple handles all billing and refund decisions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Will I lose my data if I cancel?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>No. Your food logs, weight history, and goals are stored securely and will remain accessible after cancellation. You'll simply revert to the free plan limits for AI features.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Credits FAQ -->
+    <div class="faq-group" id="en-faq-credits">
+      <div class="faq-section-title">⭐ Credits</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What are credits and how do I use them?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Credits are a one-time consumable purchase used to generate AI recipes beyond your monthly allowance. Each AI recipe generation uses 1 credit.</p>
+          <p>Available credit packs: <strong>3 credits for €1.99</strong> or <strong>10 credits for €5.99</strong>.</p>
+          <p>Credits never expire and carry over between months.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I get a refund for credits?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Credits are <strong>non-refundable</strong> as they are consumable in-app purchases. Once purchased and used, they cannot be restored. This follows Apple's consumable IAP policy.</p>
+          <p>Unused credits are never lost due to monthly resets — they carry over indefinitely.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          My credits disappeared after reinstalling the app. Help!
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Credits are linked to your NutriTrace account, not your device. Sign in with the <strong>same email address</strong> you used before and your credits will be restored from our servers.</p>
+          <p>If you're still missing credits after signing in, contact us at <a href="mailto:support@nutritrace.app">support@nutritrace.app</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account FAQ -->
+    <div class="faq-group" id="en-faq-account">
+      <div class="faq-section-title">👤 Account & Data</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I delete my account?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>To delete your account and all associated data:</p>
+          <ul>
+            <li>Open NutriTrace and go to the <strong>Profile</strong> tab</li>
+            <li>Scroll down and tap <strong>Delete Account</strong></li>
+            <li>Confirm the deletion</li>
+          </ul>
+          <p>This permanently deletes all your data from our servers. This action cannot be undone. Any unused credits will be forfeited.</p>
+          <p>Alternatively, email us at <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> with subject "Delete Account" and we'll process it within 30 days.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What data does NutriTrace collect?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>We collect only what's necessary: your email, food logs, weight entries, and goals. We do not sell your data. Read our full <a href="privacy.html">Privacy Policy</a> for details.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          I can't log in to my account. What should I do?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <ul>
+            <li>Use the <strong>"Forgot Password"</strong> link on the login screen to reset your password via email</li>
+            <li>If you signed up with Apple or Google, use that same method to sign in</li>
+            <li>Check your internet connection</li>
+            <li>If none of the above works, contact <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I export my data?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Data export is not currently available in-app. If you need a copy of your personal data, email us at <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> with subject "Data Export Request." We'll provide your data within 30 days, in accordance with GDPR.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features FAQ -->
+    <div class="faq-group" id="en-faq-features">
+      <div class="faq-section-title">🥗 Features</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the AI recipe generator work?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Enter a list of ingredients you have at home and NutriTrace will generate a complete recipe with nutritional information using AI. Free users get 3 recipes per month; Premium users get unlimited recipes.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How accurate is the meal scanner?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>The meal scanner uses AI to estimate the nutritional content from a photo. Accuracy depends on food visibility and portion size. Always treat results as estimates — they may vary by ±20% from actual values.</p>
+          <p>For maximum accuracy, log meals manually or confirm the AI's suggestion before saving.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          The calorie calculator isn't showing my goal. What's wrong?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Make sure you've completed the <strong>Goal Setup</strong> by tapping the settings icon on the Calculator tab. If your goal shows as "Not set," tap it to configure your objective, current weight, target weight, and activity level.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Does NutriTrace work offline?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Basic calorie logging and water tracking work offline. AI features (recipe generation, meal scan, meal planner) require an internet connection. Your data syncs automatically when you're back online.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I use NutriTrace on multiple devices?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. Sign in with the same account on any iOS device and your data will sync automatically via our cloud service.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-section" id="en-contact">
+      <h2>Still need help?</h2>
+      <p>Our support team usually responds within 24 hours on business days. You can also email us directly.</p>
+
+      <div class="contact-form">
+        <div class="form-row">
+          <label for="en-name">Your name</label>
+          <input type="text" id="en-name" placeholder="Alex" />
+        </div>
+        <div class="form-row">
+          <label for="en-email">Email address</label>
+          <input type="email" id="en-email" placeholder="you@example.com" />
+        </div>
+        <div class="form-row">
+          <label for="en-topic">Topic</label>
+          <select id="en-topic">
+            <option value="">Select a topic…</option>
+            <option value="subscription">Subscription / Billing</option>
+            <option value="credits">Credits</option>
+            <option value="account">Account / Login</option>
+            <option value="bug">Bug report</option>
+            <option value="feature">Feature request</option>
+            <option value="privacy">Privacy / Data</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="en-msg">Message</label>
+          <textarea id="en-msg" placeholder="Describe your issue or question…"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('en')">Send message</button>
+        <p class="contact-note">Tapping "Send message" opens your email app with your message pre-filled.</p>
+      </div>
+      <p class="contact-direct">Or email directly: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+
+  </div>
+</div><!-- /lang-en -->
+
+<!-- ════════════════════════════════════════════
+     FRANÇAIS
+════════════════════════════════════════════ -->
+<div class="lp-block" id="lang-fr">
+
+  <div class="page-header">
+    <h1>Assistance & FAQ</h1>
+    <p>Trouvez des réponses rapides ou contactez-nous directement — nous sommes là pour vous aider.</p>
+  </div>
+
+  <div class="content-wrap">
+
+    <div class="quick-links">
+      <a class="quick-link" href="#fr-faq-subscription">
+        <div class="ql-icon">💳</div>
+        <div class="ql-title">Abonnement</div>
+        <div class="ql-sub">Annuler, facturation</div>
+      </a>
+      <a class="quick-link" href="#fr-faq-credits">
+        <div class="ql-icon">⭐</div>
+        <div class="ql-title">Crédits</div>
+        <div class="ql-sub">Achat et utilisation</div>
+      </a>
+      <a class="quick-link" href="#fr-faq-account">
+        <div class="ql-icon">👤</div>
+        <div class="ql-title">Compte</div>
+        <div class="ql-sub">Connexion, suppression</div>
+      </a>
+      <a class="quick-link" href="#fr-faq-features">
+        <div class="ql-icon">🥗</div>
+        <div class="ql-title">Fonctionnalités</div>
+        <div class="ql-sub">Recettes IA, scan</div>
+      </a>
+      <a class="quick-link" href="#fr-contact">
+        <div class="ql-icon">✉️</div>
+        <div class="ql-title">Contactez-nous</div>
+        <div class="ql-sub">Écrivez à notre équipe</div>
+      </a>
+    </div>
+
+    <div class="faq-group" id="fr-faq-subscription">
+      <div class="faq-section-title">💳 Abonnement</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment annuler mon abonnement Premium ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Pour annuler votre abonnement NutriTrace Premium :</p>
+          <ul>
+            <li>Ouvrez l'application <strong>Réglages</strong> sur votre iPhone</li>
+            <li>Appuyez sur votre <strong>nom</strong> en haut</li>
+            <li>Appuyez sur <strong>Abonnements</strong></li>
+            <li>Sélectionnez <strong>NutriTrace</strong> puis <strong>Résilier l'abonnement</strong></li>
+          </ul>
+          <p>Votre accès Premium reste actif jusqu'à la fin de la période de facturation en cours. Nous ne remboursons pas le temps non utilisé.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment restaurer mon abonnement Premium sur un nouvel appareil ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Connectez-vous à NutriTrace avec le <strong>même identifiant Apple</strong> que celui utilisé lors de l'achat Premium. Votre abonnement sera automatiquement restauré.</p>
+          <p>S'il ne se restaure pas automatiquement, allez dans l'onglet <strong>Profil</strong> et appuyez sur <strong>"Restaurer les achats."</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          J'ai été débité mais mon abonnement n'est pas actif. Que faire ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Essayez d'abord <strong>Restaurer les achats</strong> dans l'onglet Profil. Si cela ne fonctionne pas :</p>
+          <ul>
+            <li>Vérifiez que vous êtes connecté avec le bon identifiant Apple</li>
+            <li>Vérifiez que votre abonnement est actif dans Réglages → [Nom] → Abonnements</li>
+            <li>Si le problème persiste, contactez-nous à <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> avec votre reçu Apple</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Puis-je obtenir un remboursement ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Tous les achats passent par l'App Store d'Apple. Nous ne pouvons pas traiter les remboursements directement. Pour demander un remboursement, visitez <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> et sélectionnez la charge NutriTrace.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Vais-je perdre mes données si j'annule ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Non. Vos journaux alimentaires, l'historique de poids et vos objectifs sont stockés en toute sécurité et resteront accessibles après l'annulation. Vous reviendrez simplement aux limites du plan gratuit pour les fonctionnalités IA.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="fr-faq-credits">
+      <div class="faq-section-title">⭐ Crédits</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Que sont les crédits et comment les utiliser ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Les crédits sont des achats consommables utilisés pour générer des recettes IA au-delà de votre quota mensuel. Chaque génération de recette utilise 1 crédit.</p>
+          <p>Packs disponibles : <strong>3 crédits pour 1,99 €</strong> ou <strong>10 crédits pour 5,99 €</strong>.</p>
+          <p>Les crédits n'expirent jamais et se reportent d'un mois sur l'autre.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Puis-je obtenir un remboursement pour des crédits ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Les crédits sont <strong>non remboursables</strong> en tant qu'achats consommables intégrés. Une fois achetés et utilisés, ils ne peuvent pas être restaurés. Les crédits non utilisés ne sont jamais perdus lors des réinitialisations mensuelles.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Mes crédits ont disparu après réinstallation. À l'aide !
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Les crédits sont liés à votre compte NutriTrace, pas à votre appareil. Connectez-vous avec la <strong>même adresse e-mail</strong> qu'avant et vos crédits seront restaurés depuis nos serveurs.</p>
+          <p>Si vos crédits manquent toujours après connexion, contactez <a href="mailto:support@nutritrace.app">support@nutritrace.app</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="fr-faq-account">
+      <div class="faq-section-title">👤 Compte & données</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment supprimer mon compte ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Pour supprimer votre compte et toutes les données associées :</p>
+          <ul>
+            <li>Ouvrez NutriTrace et allez dans l'onglet <strong>Profil</strong></li>
+            <li>Faites défiler vers le bas et appuyez sur <strong>Supprimer le compte</strong></li>
+            <li>Confirmez la suppression</li>
+          </ul>
+          <p>Cette action supprime définitivement toutes vos données de nos serveurs. Elle est irréversible. Les crédits non utilisés seront perdus.</p>
+          <p>Vous pouvez aussi nous envoyer un e-mail à <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> avec l'objet « Supprimer le compte ».</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quelles données NutriTrace collecte-t-il ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Nous collectons uniquement le nécessaire : votre e-mail, vos journaux alimentaires, vos entrées de poids et vos objectifs. Nous ne vendons pas vos données. Lisez notre <a href="privacy.html">Politique de confidentialité</a> pour plus de détails.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Je ne peux pas me connecter. Que faire ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <ul>
+            <li>Utilisez le lien <strong>« Mot de passe oublié »</strong> sur l'écran de connexion</li>
+            <li>Si vous vous êtes inscrit avec Apple ou Google, utilisez la même méthode</li>
+            <li>Vérifiez votre connexion internet</li>
+            <li>Si rien ne fonctionne, contactez <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="fr-faq-features">
+      <div class="faq-section-title">🥗 Fonctionnalités</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Comment fonctionne le générateur de recettes IA ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Entrez les ingrédients que vous avez chez vous et NutriTrace génère une recette complète avec ses informations nutritionnelles grâce à l'IA. Les utilisateurs gratuits reçoivent 3 recettes par mois ; les Premium ont des recettes illimitées.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          À quel point le scanner de repas est-il précis ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Le scanner utilise l'IA pour estimer les valeurs nutritionnelles à partir d'une photo. La précision dépend de la visibilité des aliments et de la taille des portions. Considérez les résultats comme des estimations — ils peuvent varier de ±20 % par rapport aux valeurs réelles.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          NutriTrace fonctionne-t-il hors ligne ?
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>La saisie de calories de base et le suivi de l'eau fonctionnent hors ligne. Les fonctionnalités IA (génération de recettes, scan de repas, planificateur) nécessitent une connexion internet. Vos données se synchronisent automatiquement lorsque vous êtes de nouveau en ligne.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section" id="fr-contact">
+      <h2>Besoin d'aide supplémentaire ?</h2>
+      <p>Notre équipe répond généralement dans les 24 heures les jours ouvrés. Vous pouvez aussi nous écrire directement.</p>
+
+      <div class="contact-form">
+        <div class="form-row">
+          <label for="fr-name">Votre nom</label>
+          <input type="text" id="fr-name" placeholder="Alex" />
+        </div>
+        <div class="form-row">
+          <label for="fr-email">Adresse e-mail</label>
+          <input type="email" id="fr-email" placeholder="vous@exemple.com" />
+        </div>
+        <div class="form-row">
+          <label for="fr-topic">Sujet</label>
+          <select id="fr-topic">
+            <option value="">Choisir un sujet…</option>
+            <option value="subscription">Abonnement / Facturation</option>
+            <option value="credits">Crédits</option>
+            <option value="account">Compte / Connexion</option>
+            <option value="bug">Signalement de bug</option>
+            <option value="feature">Suggestion de fonctionnalité</option>
+            <option value="privacy">Confidentialité / Données</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="fr-msg">Message</label>
+          <textarea id="fr-msg" placeholder="Décrivez votre problème ou question…"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('fr')">Envoyer le message</button>
+        <p class="contact-note">En cliquant sur « Envoyer le message », votre application e-mail s'ouvre avec votre message pré-rempli.</p>
+      </div>
+      <p class="contact-direct">Ou écrivez directement : <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+
+  </div>
+</div><!-- /lang-fr -->
+
+<!-- ════════════════════════════════════════════
+     عربي
+════════════════════════════════════════════ -->
+<div class="lp-block" id="lang-ar" dir="rtl" style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif;">
+
+  <div class="page-header">
+    <h1>الدعم والأسئلة الشائعة</h1>
+    <p>ابحث عن إجابات سريعة أو تواصل معنا مباشرةً — نحن هنا للمساعدة.</p>
+  </div>
+
+  <div class="content-wrap">
+
+    <div class="quick-links">
+      <a class="quick-link" href="#ar-faq-subscription">
+        <div class="ql-icon">💳</div>
+        <div class="ql-title">الاشتراك</div>
+        <div class="ql-sub">الإلغاء والفوترة</div>
+      </a>
+      <a class="quick-link" href="#ar-faq-credits">
+        <div class="ql-icon">⭐</div>
+        <div class="ql-title">الرصيد</div>
+        <div class="ql-sub">الشراء والاستخدام</div>
+      </a>
+      <a class="quick-link" href="#ar-faq-account">
+        <div class="ql-icon">👤</div>
+        <div class="ql-title">الحساب</div>
+        <div class="ql-sub">تسجيل الدخول والحذف</div>
+      </a>
+      <a class="quick-link" href="#ar-faq-features">
+        <div class="ql-icon">🥗</div>
+        <div class="ql-title">المميزات</div>
+        <div class="ql-sub">وصفات الذكاء الاصطناعي</div>
+      </a>
+      <a class="quick-link" href="#ar-contact">
+        <div class="ql-icon">✉️</div>
+        <div class="ql-title">تواصل معنا</div>
+        <div class="ql-sub">راسل فريقنا</div>
+      </a>
+    </div>
+
+    <div class="faq-group" id="ar-faq-subscription">
+      <div class="faq-section-title">💳 الاشتراك</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          كيف أُلغي اشتراكي في Premium؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>لإلغاء اشتراك NutriTrace Premium:</p>
+          <ul>
+            <li>افتح تطبيق <strong>الإعدادات</strong> على iPhone</li>
+            <li>اضغط على <strong>اسمك</strong> في الأعلى</li>
+            <li>اضغط على <strong>الاشتراكات</strong></li>
+            <li>اختر <strong>NutriTrace</strong> ثم اضغط <strong>إلغاء الاشتراك</strong></li>
+          </ul>
+          <p>يظل وصولك إلى Premium نشطًا حتى نهاية فترة الفوترة الحالية. لا نُعيد المبالغ المدفوعة عن الوقت غير المستخدم.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          كيف أستعيد اشتراكي على جهاز جديد؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>سجّل الدخول إلى NutriTrace بنفس <strong>معرف Apple</strong> المستخدم عند شراء Premium. سيُستعاد اشتراكك تلقائيًا.</p>
+          <p>إذا لم يُستعَد تلقائيًا، انتقل إلى تبويب <strong>الملف الشخصي</strong> واضغط على <strong>"استعادة المشتريات."</strong></p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          تم خصم مبلغ مني لكن الاشتراك غير مفعّل. ماذا أفعل؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>جرّب أولاً <strong>استعادة المشتريات</strong> في تبويب الملف الشخصي. إذا لم ينجح ذلك:</p>
+          <ul>
+            <li>تأكد من تسجيل الدخول بمعرف Apple الصحيح</li>
+            <li>تحقق من أن اشتراكك نشط في الإعدادات ← [الاسم] ← الاشتراكات</li>
+            <li>إذا استمرت المشكلة، تواصل معنا على <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> مع إيصال Apple</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          هل يمكنني استرداد أموالي؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>جميع المشتريات تتم عبر App Store من Apple. لا يمكننا معالجة المبالغ المستردة مباشرةً. لطلب استرداد، تفضل بزيارة <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> واختر رسوم NutriTrace.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="ar-faq-credits">
+      <div class="faq-section-title">⭐ الرصيد</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          ما هو الرصيد وكيف أستخدمه؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>الرصيد عبارة عن مشتريات استهلاكية تُستخدم لتوليد وصفات الذكاء الاصطناعي بما يتجاوز حصتك الشهرية. كل وصفة تستهلك رصيدًا واحدًا.</p>
+          <p>الحزم المتاحة: <strong>3 رصيد مقابل 1.99 يورو</strong> أو <strong>10 رصيد مقابل 5.99 يورو</strong>.</p>
+          <p>الرصيد لا ينتهي أبدًا ويتراكم من شهر لآخر.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          هل يمكن استرداد الرصيد؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>الرصيد <strong>غير قابل للاسترداد</strong> لكونه مشتريات استهلاكية داخل التطبيق. بمجرد شرائه واستخدامه، لا يمكن استعادته. الرصيد غير المستخدم لا يُفقد أبدًا مع إعادة التعيين الشهرية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          اختفى رصيدي بعد إعادة تثبيت التطبيق. المساعدة!
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>الرصيد مرتبط بحساب NutriTrace وليس بجهازك. سجّل الدخول بنفس <strong>عنوان البريد الإلكتروني</strong> السابق وسيُستعاد رصيدك من خوادمنا.</p>
+          <p>إذا كان الرصيد لا يزال مفقودًا بعد تسجيل الدخول، تواصل مع <a href="mailto:support@nutritrace.app">support@nutritrace.app</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="ar-faq-account">
+      <div class="faq-section-title">👤 الحساب والبيانات</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          كيف أحذف حسابي؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>لحذف حسابك وجميع البيانات المرتبطة به:</p>
+          <ul>
+            <li>افتح NutriTrace وانتقل إلى تبويب <strong>الملف الشخصي</strong></li>
+            <li>مرّر للأسفل واضغط على <strong>حذف الحساب</strong></li>
+            <li>أكّد الحذف</li>
+          </ul>
+          <p>يؤدي ذلك إلى حذف جميع بياناتك نهائيًا من خوادمنا. هذا الإجراء لا يمكن التراجع عنه. أي رصيد غير مستخدم سيُفقد.</p>
+          <p>يمكنك أيضًا مراسلتنا على <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> بعنوان "حذف الحساب".</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          ما البيانات التي يجمعها NutriTrace؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>نجمع فقط ما هو ضروري: بريدك الإلكتروني وسجلات الطعام ومدخلات الوزن وأهدافك. لا نبيع بياناتك. اقرأ <a href="privacy.html">سياسة الخصوصية</a> للتفاصيل.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          لا أستطيع تسجيل الدخول. ماذا أفعل؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <ul>
+            <li>استخدم رابط <strong>"نسيت كلمة المرور"</strong> في شاشة تسجيل الدخول</li>
+            <li>إذا سجّلت بـ Apple أو Google، استخدم نفس الطريقة</li>
+            <li>تحقق من اتصالك بالإنترنت</li>
+            <li>إذا لم ينجح شيء، تواصل مع <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-group" id="ar-faq-features">
+      <div class="faq-section-title">🥗 المميزات</div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          كيف يعمل مولّد الوصفات بالذكاء الاصطناعي؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>أدخل قائمة المكونات المتوفرة لديك وسيُنشئ NutriTrace وصفة كاملة مع معلوماتها الغذائية باستخدام الذكاء الاصطناعي. يحصل المستخدمون المجانيون على 3 وصفات شهريًا؛ والمستخدمون المميزون على وصفات غير محدودة.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          ما مدى دقة ماسح الوجبات؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>يستخدم الماسح الذكاء الاصطناعي لتقدير القيم الغذائية من صورة. تعتمد الدقة على وضوح الطعام وحجم الحصة. اعتبر النتائج تقديرية — قد تختلف بنسبة ±20% عن القيم الفعلية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)" style="text-align:right;">
+          هل يعمل NutriTrace بدون إنترنت؟
+          <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>تعمل إدخالات السعرات الحرارية وتتبع الماء بدون إنترنت. ميزات الذكاء الاصطناعي (توليد الوصفات، مسح الوجبات، المخطط) تتطلب اتصالاً بالإنترنت. تتزامن بياناتك تلقائيًا عند الاتصال.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section" id="ar-contact">
+      <h2>هل تحتاج إلى مزيد من المساعدة؟</h2>
+      <p>يرد فريق الدعم عادةً خلال 24 ساعة في أيام العمل. يمكنك أيضًا مراسلتنا مباشرةً.</p>
+
+      <div class="contact-form" dir="rtl">
+        <div class="form-row">
+          <label for="ar-name">اسمك</label>
+          <input type="text" id="ar-name" placeholder="أليكس" style="text-align:right;" />
+        </div>
+        <div class="form-row">
+          <label for="ar-email">عنوان البريد الإلكتروني</label>
+          <input type="email" id="ar-email" placeholder="you@example.com" dir="ltr" />
+        </div>
+        <div class="form-row">
+          <label for="ar-topic">الموضوع</label>
+          <select id="ar-topic" style="text-align:right;">
+            <option value="">اختر موضوعًا…</option>
+            <option value="subscription">الاشتراك / الفوترة</option>
+            <option value="credits">الرصيد</option>
+            <option value="account">الحساب / تسجيل الدخول</option>
+            <option value="bug">الإبلاغ عن خطأ</option>
+            <option value="feature">اقتراح ميزة</option>
+            <option value="privacy">الخصوصية / البيانات</option>
+            <option value="other">أخرى</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="ar-msg">الرسالة</label>
+          <textarea id="ar-msg" placeholder="صف مشكلتك أو سؤالك…" style="text-align:right;"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm('ar')">إرسال الرسالة</button>
+        <p class="contact-note">بالضغط على "إرسال الرسالة" سيفتح تطبيق البريد الإلكتروني مع رسالتك جاهزة.</p>
+      </div>
+      <p class="contact-direct">أو راسلنا مباشرةً: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+
+  </div>
+</div><!-- /lang-ar -->
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><span>🥗</span> NutriTrace</div>
+      <p class="lp-block active" id="foot-tag-en">AI-powered nutrition companion for iOS. Track calories, build healthy habits, and reach your goals.</p>
+      <p class="lp-block" id="foot-tag-fr">Votre compagnon nutrition IA pour iOS. Suivez vos calories, adoptez de bonnes habitudes et atteignez vos objectifs.</p>
+      <p class="lp-block" id="foot-tag-ar">رفيقك الذكي للتغذية على iOS. تتبع السعرات الحرارية وابنِ عادات صحية وحقق أهدافك.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="lp-block active" id="foot-h-legal-en">Legal</h4>
+      <h4 class="lp-block" id="foot-h-legal-fr">Légal</h4>
+      <h4 class="lp-block" id="foot-h-legal-ar">قانوني</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy / Politique de confidentialité</a></li>
+        <li><a href="terms.html">Terms of Use / Conditions d'utilisation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="lp-block active" id="foot-h-more-en">More</h4>
+      <h4 class="lp-block" id="foot-h-more-fr">Plus</h4>
+      <h4 class="lp-block" id="foot-h-more-ar">المزيد</h4>
+      <ul>
+        <li><a href="support.html">Support / FAQ</a></li>
+        <li><a href="mailto:support@nutritrace.app">support@nutritrace.app</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Alexandre Zanaty · NutriTrace</span>
+    <span>Powered by Claude AI (Anthropic)</span>
+  </div>
+</footer>
+
+<script>
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const isAr = lang === 'ar';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+    ['en','fr','ar'].forEach(l => {
+      const el = document.getElementById('lang-' + l);
+      if (el) el.classList.toggle('active', l === lang);
+    });
+
+    document.querySelectorAll('[id^="nav-features-"], [id^="nav-pricing-"], [id^="nav-support-"]').forEach(el => {
+      const suffix = el.id.split('-').pop();
+      el.classList.toggle('active', suffix === lang);
+    });
+
+    ['foot-tag-en','foot-tag-fr','foot-tag-ar',
+     'foot-h-legal-en','foot-h-legal-fr','foot-h-legal-ar',
+     'foot-h-more-en','foot-h-more-fr','foot-h-more-ar'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', id.endsWith(lang));
+    });
+
+    document.querySelectorAll('.lang-pill').forEach((btn, i) => {
+      const l = ['en','fr','ar'][i];
+      btn.classList.toggle('active', l === lang);
+    });
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    // Close all in same group
+    const group = item.closest('.faq-group');
+    group.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+
+  function submitForm(lang) {
+    const name    = document.getElementById(lang + '-name').value.trim();
+    const email   = document.getElementById(lang + '-email').value.trim();
+    const topicEl = document.getElementById(lang + '-topic');
+    const topic   = topicEl.options[topicEl.selectedIndex].text;
+    const msg     = document.getElementById(lang + '-msg').value.trim();
+
+    if (!email || !msg) {
+      const warn = { en: 'Please fill in your email and message.', fr: 'Veuillez renseigner votre e-mail et votre message.', ar: 'يرجى تعبئة البريد الإلكتروني والرسالة.' };
+      alert(warn[lang]);
+      return;
+    }
+
+    const subjects = { en: 'NutriTrace Support Request', fr: 'Demande d\'assistance NutriTrace', ar: 'طلب دعم NutriTrace' };
+    const body = encodeURIComponent(`Name: ${name}\nTopic: ${topic}\n\n${msg}`);
+    window.location.href = `mailto:support@nutritrace.app?subject=${encodeURIComponent(subjects[lang])}&body=${body}`;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const nav = navigator.language || navigator.userLanguage || 'en';
+    if (nav.startsWith('fr')) setLang('fr');
+    else if (nav.startsWith('ar')) setLang('ar');
+    else setLang('en');
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrace – Privacy Policy</title>
+  <meta name="description" content="NutriTrace Privacy Policy – how we collect, use and protect your personal data." />
+  <link rel="canonical" href="https://nutritrace.app/privacy.html" />
+  <meta property="og:title" content="NutriTrace – Privacy Policy" />
+  <meta property="og:url" content="https://nutritrace.app/privacy.html" />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:#2d6a2d; --green-dark:#1b4d1b; --green-light:#e8f5e9;
+      --green-mid:#3a8a3a; --text:#1a2e1a; --muted:#555; --border:#c8e6c9;
+      --bg:#f7faf7; --white:#fff; --radius:12px;
+    }
+    body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.75; font-size:16px; }
+
+    /* NAV */
+    nav { background:var(--green); padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:60px; }
+    .nav-logo { color:#fff; font-size:1.15rem; font-weight:800; text-decoration:none; display:flex; align-items:center; gap:8px; }
+    .nav-back { color:rgba(255,255,255,0.85); text-decoration:none; font-size:0.88rem; font-weight:600; transition:color 0.18s; }
+    .nav-back:hover { color:#fff; }
+
+    /* LANG BAR */
+    .lang-bar { background:var(--green-dark); display:flex; justify-content:center; gap:6px; padding:10px 24px; }
+    .lang-btn { background:transparent; border:2px solid rgba(255,255,255,0.4); color:#fff; border-radius:20px; padding:5px 18px; font-size:0.82rem; font-weight:700; cursor:pointer; transition:0.18s; }
+    .lang-btn:hover { background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.8); }
+    .lang-btn.active { background:#fff; color:var(--green); border-color:#fff; }
+
+    /* CONTENT */
+    main { max-width:780px; margin:40px auto; padding:0 20px 80px; }
+    .lang-panel { display:none; }
+    .lang-panel.visible { display:block; }
+    .lang-panel[data-lang="ar"] { direction:rtl; }
+
+    .effective { background:var(--green-light); border:1px solid var(--border); border-radius:var(--radius); padding:11px 18px; font-size:0.88rem; color:var(--green); font-weight:700; margin-bottom:24px; text-align:center; }
+    .card { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:28px 32px; margin-bottom:16px; box-shadow:0 1px 6px rgba(0,0,0,0.05); }
+    h1 { font-size:1.6rem; color:var(--green); margin-bottom:8px; font-weight:800; }
+    h2 { font-size:1.05rem; color:var(--green); margin:20px 0 8px; font-weight:700; }
+    p  { margin-bottom:12px; }
+    ul { margin:8px 0 12px 22px; }
+    .lang-panel[data-lang="ar"] ul { margin:8px 22px 12px 0; }
+    li { margin-bottom:6px; }
+    a  { color:var(--green); }
+    .intro { color:var(--muted); font-size:0.97rem; }
+
+    .contact-box { background:var(--green-light); border-left:4px solid var(--green-mid); border-radius:0 var(--radius) var(--radius) 0; padding:16px 20px; margin-top:8px; }
+    .lang-panel[data-lang="ar"] .contact-box { border-left:none; border-right:4px solid var(--green-mid); border-radius:var(--radius) 0 0 var(--radius); }
+    .contact-box p { margin:0; }
+
+    /* FOOTER */
+    footer { background:var(--green-dark); color:rgba(255,255,255,0.75); text-align:center; font-size:0.82rem; padding:20px 24px; }
+    footer a { color:rgba(255,255,255,0.85); }
+    footer strong { color:#fff; }
+
+    @media(max-width:540px){ .card{padding:20px 18px;} h1{font-size:1.3rem;} }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><span>🥗</span> NutriTrace</a>
+  <a class="nav-back" href="index.html">← Home</a>
+</nav>
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')">EN</button>
+  <button class="lang-btn"        onclick="setLang('fr')">FR</button>
+  <button class="lang-btn"        onclick="setLang('ar')">AR</button>
+</div>
+
+<main>
+
+  <!-- ═══ ENGLISH ═══ -->
+  <div class="lang-panel visible" data-lang="en">
+    <div class="effective">Effective date: May 1, 2026</div>
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p class="intro">NutriTrace ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights under GDPR and applicable privacy laws. Controller: Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+    <div class="card">
+      <h2>1. Data We Collect</h2>
+      <p>We collect only what is necessary to provide the service:</p>
+      <ul>
+        <li><strong>Account:</strong> name, email address, profile photo (optional).</li>
+        <li><strong>Physical metrics:</strong> age, sex, height, body weight.</li>
+        <li><strong>Health data:</strong> daily food logs, calorie intake, macronutrients, fiber, water intake.</li>
+        <li><strong>Goal data:</strong> fitness objectives, target weight, estimated timeline, activity level.</li>
+        <li><strong>AI content:</strong> ingredients you enter and meal photos you scan (processed by Anthropic, not stored).</li>
+        <li><strong>Usage data:</strong> feature usage, crash reports (anonymous).</li>
+        <li><strong>Purchase data:</strong> subscription status and credit balance via RevenueCat. We never store payment card details.</li>
+      </ul>
+      <p>We do not collect precise location, device contacts, or advertising identifiers beyond what Apple's App Tracking Transparency framework permits.</p>
+    </div>
+    <div class="card">
+      <h2>2. Legal Basis for Processing (GDPR)</h2>
+      <ul>
+        <li><strong>Performance of contract</strong> – to provide the nutrition tracking service.</li>
+        <li><strong>Legitimate interest</strong> – to improve app stability and fix bugs.</li>
+        <li><strong>Consent</strong> – for push notifications and App Tracking Transparency. You may withdraw consent at any time.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>3. Third-Party Services</h2>
+      <ul>
+        <li><strong>Supabase</strong> – database, auth, file storage. EU servers. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+        <li><strong>Anthropic Claude API</strong> – AI recipe & meal scan processing. Inputs are transient; not used to train models. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></li>
+        <li><strong>RevenueCat</strong> – subscription & in-app purchase management. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
+        <li><strong>Apple Inc.</strong> – App Store distribution, Apple Sign-In, in-app purchases.</li>
+        <li><strong>Google LLC</strong> – Google Sign-In. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      </ul>
+      <p>We do not sell your data to third parties. Ever.</p>
+    </div>
+    <div class="card">
+      <h2>4. Data Storage &amp; Security</h2>
+      <p>Data is stored on Supabase with row-level security (RLS) — you can only access your own records. Encryption in transit (TLS 1.3) and at rest. Local caching via AsyncStorage for offline access.</p>
+    </div>
+    <div class="card">
+      <h2>5. Data Retention</h2>
+      <p>Data is kept while your account is active. Deleting your account (Profile → Delete Account) erases all personal data within 30 days. Anonymised aggregate statistics may be retained indefinitely.</p>
+    </div>
+    <div class="card">
+      <h2>6. Your Rights (GDPR)</h2>
+      <ul>
+        <li><strong>Access</strong> – request a copy of all data we hold.</li>
+        <li><strong>Rectification</strong> – correct inaccurate data.</li>
+        <li><strong>Erasure</strong> – delete your account and all data.</li>
+        <li><strong>Portability</strong> – export your data as JSON (Profile → Export Data).</li>
+        <li><strong>Restriction / Objection</strong> – limit or object to specific processing.</li>
+        <li><strong>Withdraw consent</strong> – at any time, without affecting prior processing.</li>
+      </ul>
+      <p>Use "Manage My Data" in the app or email us. Response within 30 days. You may also complain to your national DPA (France: <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>).</p>
+    </div>
+    <div class="card">
+      <h2>7. Children's Privacy</h2>
+      <p>NutriTrace is not intended for users under 16 (13 in the US under COPPA). We do not knowingly collect data from minors. Contact us immediately if you believe a minor has provided us data.</p>
+    </div>
+    <div class="card">
+      <h2>8. Push Notifications</h2>
+      <p>We may send reminders for hydration, meals, weight check-ins and recipe ideas. You can manage these in Profile → Notifications or in your device Settings at any time.</p>
+    </div>
+    <div class="card">
+      <h2>9. App Tracking Transparency (iOS)</h2>
+      <p>On iOS 14+, we request App Tracking Transparency permission. If you decline, the app works fully — we only use tracking to help measure the effectiveness of our App Store campaigns. You can change this in iOS Settings → Privacy → Tracking.</p>
+    </div>
+    <div class="card">
+      <h2>10. Changes to This Policy</h2>
+      <p>Material changes will be notified via in-app notification. The effective date above shows the latest update.</p>
+    </div>
+    <div class="card">
+      <h2>11. Contact</h2>
+      <div class="contact-box">
+        <p><strong>NutriTrace Support</strong><br>Email: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+      </div>
+    </div>
+  </div><!-- /en -->
+
+  <!-- ═══ FRANÇAIS ═══ -->
+  <div class="lang-panel" data-lang="fr">
+    <div class="effective">Date d'entrée en vigueur : 1er mai 2026</div>
+    <div class="card">
+      <h1>Politique de confidentialité</h1>
+      <p class="intro">NutriTrace (« nous ») s'engage à protéger vos données personnelles conformément au RGPD. Responsable du traitement : Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+    <div class="card">
+      <h2>1. Données collectées</h2>
+      <ul>
+        <li><strong>Compte :</strong> nom, e-mail, photo de profil (optionnelle).</li>
+        <li><strong>Métriques physiques :</strong> âge, sexe, taille, poids corporel.</li>
+        <li><strong>Données de santé :</strong> journaux alimentaires, saisies caloriques, macronutriments, fibres, eau.</li>
+        <li><strong>Données d'objectif :</strong> objectifs fitness, poids cible, durée estimée, niveau d'activité.</li>
+        <li><strong>Contenu IA :</strong> ingrédients saisis et photos de repas scannées (traitement par Anthropic, non stockées).</li>
+        <li><strong>Données d'utilisation :</strong> utilisation des fonctionnalités, rapports de crash (anonymes).</li>
+        <li><strong>Données d'achat :</strong> statut d'abonnement et solde de crédits via RevenueCat. Aucune donnée bancaire n'est stockée.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>2. Base légale (RGPD)</h2>
+      <ul>
+        <li><strong>Exécution du contrat</strong> – fourniture du service de suivi nutritionnel.</li>
+        <li><strong>Intérêt légitime</strong> – amélioration de la stabilité et correction des bugs.</li>
+        <li><strong>Consentement</strong> – notifications push et transparence du suivi. Retirable à tout moment.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>3. Services tiers</h2>
+      <ul>
+        <li><strong>Supabase</strong> – base de données, auth, stockage. Serveurs EU. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
+        <li><strong>API Anthropic Claude</strong> – génération de recettes et scan IA. Données transitoires, non utilisées pour entraîner les modèles.</li>
+        <li><strong>RevenueCat</strong> – gestion des abonnements et achats in-app.</li>
+        <li><strong>Apple Inc.</strong> – App Store, Apple Sign-In, achats in-app.</li>
+        <li><strong>Google LLC</strong> – Google Sign-In.</li>
+      </ul>
+      <p>Nous ne vendons jamais vos données à des tiers.</p>
+    </div>
+    <div class="card">
+      <h2>4. Stockage et sécurité</h2>
+      <p>Données stockées sur Supabase avec sécurité au niveau des lignes (RLS). Chiffrement en transit (TLS 1.3) et au repos. Cache local via AsyncStorage pour l'accès hors ligne.</p>
+    </div>
+    <div class="card">
+      <h2>5. Conservation des données</h2>
+      <p>Données conservées tant que le compte est actif. La suppression du compte (Profil → Supprimer le compte) efface toutes les données personnelles sous 30 jours.</p>
+    </div>
+    <div class="card">
+      <h2>6. Vos droits (RGPD)</h2>
+      <ul>
+        <li><strong>Accès</strong> – demande de copie de vos données.</li>
+        <li><strong>Rectification</strong> – correction des données inexactes.</li>
+        <li><strong>Effacement</strong> – suppression du compte et des données.</li>
+        <li><strong>Portabilité</strong> – export JSON (Profil → Exporter les données).</li>
+        <li><strong>Restriction / Opposition</strong> – limitation ou opposition au traitement.</li>
+        <li><strong>Retrait du consentement</strong> – à tout moment, sans effet rétroactif.</li>
+      </ul>
+      <p>Utilisez « Gérer mes données » dans l'appli ou contactez-nous par e-mail. Réponse sous 30 jours. Réclamation possible auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.</p>
+    </div>
+    <div class="card">
+      <h2>7. Protection des mineurs</h2>
+      <p>NutriTrace n'est pas destiné aux moins de 16 ans. Contactez-nous si vous pensez qu'un mineur nous a fourni des données.</p>
+    </div>
+    <div class="card">
+      <h2>8. Notifications push</h2>
+      <p>Rappels d'hydratation, de repas, de pesée et d'idées de recettes. Gérables dans Profil → Notifications ou dans les réglages iOS.</p>
+    </div>
+    <div class="card">
+      <h2>9. App Tracking Transparency (iOS)</h2>
+      <p>Sur iOS 14+, nous demandons l'autorisation ATT. En cas de refus, l'application fonctionne intégralement. Modifiable dans Réglages iOS → Confidentialité → Suivi.</p>
+    </div>
+    <div class="card">
+      <h2>10. Modifications</h2>
+      <p>Les changements importants seront notifiés dans l'application. La date en haut indique la dernière mise à jour.</p>
+    </div>
+    <div class="card">
+      <h2>11. Contact</h2>
+      <div class="contact-box">
+        <p><strong>Support NutriTrace</strong><br>E-mail : <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+      </div>
+    </div>
+  </div><!-- /fr -->
+
+  <!-- ═══ العربية ═══ -->
+  <div class="lang-panel" data-lang="ar">
+    <div class="effective">تاريخ السريان: 1 مايو 2026</div>
+    <div class="card">
+      <h1>سياسة الخصوصية</h1>
+      <p class="intro">تلتزم NutriTrace («نحن») بحماية بياناتك الشخصية وفق اللائحة العامة لحماية البيانات (GDPR). المتحكم في البيانات: Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+    </div>
+    <div class="card">
+      <h2>١. البيانات التي نجمعها</h2>
+      <ul>
+        <li><strong>الحساب:</strong> الاسم والبريد الإلكتروني وصورة الملف (اختيارية).</li>
+        <li><strong>المقاييس الجسدية:</strong> العمر والجنس والطول والوزن.</li>
+        <li><strong>بيانات الصحة:</strong> سجلات الطعام والسعرات والماكروز والألياف والماء.</li>
+        <li><strong>بيانات الهدف:</strong> أهداف اللياقة والوزن المستهدف والمدة التقديرية ومستوى النشاط.</li>
+        <li><strong>محتوى الذكاء الاصطناعي:</strong> المكونات وصور الوجبات (معالجة عابرة بواسطة Anthropic).</li>
+        <li><strong>بيانات الاستخدام:</strong> استخدام الميزات وتقارير الأعطال (مجهولة).</li>
+        <li><strong>بيانات الشراء:</strong> حالة الاشتراك والرصيد عبر RevenueCat. لا نحتفظ ببيانات الدفع.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>٢. الأساس القانوني (GDPR)</h2>
+      <ul>
+        <li><strong>تنفيذ العقد</strong> – تقديم خدمة تتبع التغذية.</li>
+        <li><strong>المصلحة المشروعة</strong> – تحسين استقرار التطبيق وإصلاح الأخطاء.</li>
+        <li><strong>الموافقة</strong> – الإشعارات والتتبع. قابلة للسحب في أي وقت.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>٣. الخدمات الخارجية</h2>
+      <ul>
+        <li><strong>Supabase</strong> – قاعدة البيانات والمصادقة والتخزين. خوادم الاتحاد الأوروبي.</li>
+        <li><strong>Anthropic Claude API</strong> – توليد الوصفات ومسح الوجبات. معالجة عابرة، لا تُستخدم للتدريب.</li>
+        <li><strong>RevenueCat</strong> – إدارة الاشتراكات والمشتريات.</li>
+        <li><strong>Apple Inc.</strong> – App Store وApple Sign-In والمشتريات.</li>
+        <li><strong>Google LLC</strong> – Google Sign-In.</li>
+      </ul>
+      <p>لا نبيع بياناتك لأي طرف ثالث.</p>
+    </div>
+    <div class="card">
+      <h2>٤. التخزين والأمان</h2>
+      <p>البيانات مخزّنة على Supabase مع أمان على مستوى الصفوف (RLS). تشفير أثناء النقل (TLS 1.3) وفي حالة السكون. تخزين محلي عبر AsyncStorage للوصول دون إنترنت.</p>
+    </div>
+    <div class="card">
+      <h2>٥. الاحتفاظ بالبيانات</h2>
+      <p>نحتفظ بالبيانات طالما حسابك نشط. حذف الحساب (الملف الشخصي ← حذف الحساب) يمحو جميع البيانات خلال 30 يوماً.</p>
+    </div>
+    <div class="card">
+      <h2>٦. حقوقك (GDPR)</h2>
+      <ul>
+        <li><strong>الوصول</strong> – طلب نسخة من جميع بياناتك.</li>
+        <li><strong>التصحيح</strong> – تصحيح البيانات غير الدقيقة.</li>
+        <li><strong>الحذف</strong> – حذف حسابك وجميع البيانات.</li>
+        <li><strong>قابلية النقل</strong> – تصدير البيانات بصيغة JSON.</li>
+        <li><strong>التقييد / الاعتراض</strong> – تحديد أو الاعتراض على المعالجة.</li>
+        <li><strong>سحب الموافقة</strong> – في أي وقت دون أثر رجعي.</li>
+      </ul>
+      <p>استخدم «إدارة بياناتي» في التطبيق أو تواصل معنا. سنرد خلال 30 يوماً.</p>
+    </div>
+    <div class="card">
+      <h2>٧. خصوصية الأطفال</h2>
+      <p>التطبيق غير موجّه لمن دون 16 عاماً. تواصل معنا إذا كنت تعتقد أن قاصراً قدّم لنا بيانات.</p>
+    </div>
+    <div class="card">
+      <h2>٨. إشعارات الدفع</h2>
+      <p>تذكيرات للترطيب والوجبات والوزن والوصفات. قابلة للإدارة في الملف الشخصي ← الإشعارات أو إعدادات iOS.</p>
+    </div>
+    <div class="card">
+      <h2>٩. App Tracking Transparency (iOS)</h2>
+      <p>على iOS 14+، نطلب إذن ATT. عند الرفض، يعمل التطبيق بالكامل. قابل للتغيير في الإعدادات ← الخصوصية ← التتبع.</p>
+    </div>
+    <div class="card">
+      <h2>١٠. التغييرات على هذه السياسة</h2>
+      <p>التغييرات الجوهرية تُبلَّغ عبر إشعار داخل التطبيق. التاريخ أعلاه يُشير إلى آخر تحديث.</p>
+    </div>
+    <div class="card">
+      <h2>١١. تواصل معنا</h2>
+      <div class="contact-box">
+        <p><strong>دعم NutriTrace</strong><br>البريد الإلكتروني: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
+      </div>
+    </div>
+  </div><!-- /ar -->
+
+</main>
+
+<footer>
+  <strong>NutriTrace</strong> · © 2026 Alexandre Zanaty ·
+  <a href="mailto:support@nutritrace.app">support@nutritrace.app</a> ·
+  <a href="index.html">Home</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-panel').forEach(function(el){ el.classList.toggle('visible', el.dataset.lang === lang); });
+    document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang); });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  (function(){ var n=(navigator.language||'en').toLowerCase(); if(n.startsWith('fr'))setLang('fr'); else if(n.startsWith('ar'))setLang('ar'); })();
+</script>
+</body>
+</html>

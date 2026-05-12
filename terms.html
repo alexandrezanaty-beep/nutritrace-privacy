@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use – NutriTrace</title>
+  <meta name="description" content="Terms of Use for the NutriTrace nutrition app. Learn about our subscription, credits, and user responsibilities." />
+  <meta name="author" content="Alexandre Zanaty" />
+  <link rel="canonical" href="https://nutritrace.app/terms.html" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:       #2d6a2d;
+      --green-dark:  #1b4d1b;
+      --green-mid:   #3a8a3a;
+      --green-light: #e8f5e9;
+      --green-pale:  #f4fbf4;
+      --accent:      #ff8f00;
+      --text:        #1a2e1a;
+      --text-2:      #4a6349;
+      --muted:       #6b8f6b;
+      --border:      #c8e6c9;
+      --bg:          #f7faf7;
+      --white:       #ffffff;
+      --radius:      14px;
+      --shadow:      0 4px 24px rgba(45,106,45,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* ─── LANG PANELS ─── */
+    .lp-block { display: none; }
+    .lp-block.active { display: block; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.25rem; font-weight: 800; color: var(--green);
+      text-decoration: none; letter-spacing: -0.3px;
+    }
+    .nav-logo span { font-size: 1.5rem; }
+    .nav-links {
+      display: flex; gap: 28px; list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-2); text-decoration: none;
+      font-size: 0.9rem; font-weight: 600;
+      transition: color 0.18s;
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-right { display: flex; align-items: center; gap: 12px; }
+
+    .lang-pills {
+      display: flex; gap: 4px;
+      background: var(--green-light);
+      border-radius: 24px; padding: 3px;
+    }
+    .lang-pill {
+      border: none; background: transparent;
+      color: var(--green); font-size: 0.78rem; font-weight: 700;
+      padding: 4px 11px; border-radius: 20px; cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+    .lang-pill.active { background: var(--green); color: var(--white); }
+    .lang-pill:hover:not(.active) { background: rgba(45,106,45,0.15); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      background: linear-gradient(155deg, var(--green-dark) 0%, var(--green) 60%, var(--green-mid) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 900; margin-bottom: 10px; letter-spacing: -0.4px;
+    }
+    .page-header .updated {
+      font-size: 0.88rem; opacity: 0.8;
+    }
+
+    /* ─── CONTENT ─── */
+    .content-wrap {
+      max-width: 820px; margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+    .toc h3 {
+      font-size: 0.9rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--green); margin-bottom: 14px;
+    }
+    .toc ol {
+      margin: 0; padding-left: 20px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px;
+    }
+    .toc li a {
+      color: var(--text-2); text-decoration: none; font-size: 0.88rem;
+      transition: color 0.15s;
+    }
+    .toc li a:hover { color: var(--green); }
+
+    .section {
+      margin-bottom: 40px;
+    }
+    .section h2 {
+      font-size: 1.25rem; font-weight: 800; color: var(--green);
+      margin-bottom: 14px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    .section p {
+      color: var(--text-2); margin-bottom: 12px; font-size: 0.97rem;
+    }
+    .section ul, .section ol {
+      margin: 8px 0 12px 20px; color: var(--text-2); font-size: 0.97rem;
+    }
+    .section li { margin-bottom: 6px; }
+    .section a { color: var(--green); }
+    .section strong { color: var(--text); }
+
+    .highlight-box {
+      background: var(--green-light);
+      border-left: 4px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.94rem; color: var(--text-2);
+    }
+    .highlight-box strong { color: var(--green); }
+
+    .warning-box {
+      background: #fff8e1;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.94rem; color: #5a4000;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--green-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 40px 24px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 10px; }
+    .footer-brand .logo {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 1.1rem; font-weight: 800; color: var(--white);
+    }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.5; }
+    .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; transition: color 0.15s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: 1100px; margin: 28px auto 0;
+      padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+      font-size: 0.8rem;
+    }
+
+    /* ─── RTL ─── */
+    [dir="rtl"] .toc ol { padding-right: 20px; padding-left: 0; }
+    [dir="rtl"] .section ul, [dir="rtl"] .section ol { margin-right: 20px; margin-left: 0; }
+    [dir="rtl"] .highlight-box { border-left: none; border-right: 4px solid var(--green); border-radius: var(--radius) 0 0 var(--radius); }
+    [dir="rtl"] .warning-box { border-left: none; border-right: 4px solid var(--accent); border-radius: var(--radius) 0 0 var(--radius); }
+    [dir="rtl"] .footer-inner { direction: rtl; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .toc ol { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0; z-index: 99;
+      background: var(--white); border-bottom: 1px solid var(--border);
+      padding: 16px 24px; flex-direction: column; gap: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text-2); text-decoration: none; font-weight: 600; padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-menu a:last-child { border-bottom: none; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span>🥗</span> NutriTrace
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#features" class="lp-block active" id="nav-features-en">Features</a><a href="index.html#features" class="lp-block" id="nav-features-fr">Fonctionnalités</a><a href="index.html#features" class="lp-block" id="nav-features-ar">المميزات</a></li>
+    <li><a href="index.html#pricing" class="lp-block active" id="nav-pricing-en">Pricing</a><a href="index.html#pricing" class="lp-block" id="nav-pricing-fr">Tarifs</a><a href="index.html#pricing" class="lp-block" id="nav-pricing-ar">الأسعار</a></li>
+    <li><a href="support.html" class="lp-block active" id="nav-support-en">Support</a><a href="support.html" class="lp-block" id="nav-support-fr">Assistance</a><a href="support.html" class="lp-block" id="nav-support-ar">الدعم</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-pills">
+      <button class="lang-pill active" onclick="setLang('en')">EN</button>
+      <button class="lang-pill" onclick="setLang('fr')">FR</button>
+      <button class="lang-pill" onclick="setLang('ar')">AR</button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="index.html#features">Features</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Use</a>
+</div>
+
+<!-- ─── EN ─── -->
+<div class="lp-block active" id="lang-en">
+
+  <div class="page-header">
+    <h1>Terms of Use</h1>
+    <p class="updated">Last updated: May 12, 2026</p>
+  </div>
+
+  <div class="content-wrap">
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#en-s1">Acceptance of Terms</a></li>
+        <li><a href="#en-s2">Description of Service</a></li>
+        <li><a href="#en-s3">Eligibility</a></li>
+        <li><a href="#en-s4">Subscriptions</a></li>
+        <li><a href="#en-s5">Credits (Consumable)</a></li>
+        <li><a href="#en-s6">Free Plan Limits</a></li>
+        <li><a href="#en-s7">User Responsibilities</a></li>
+        <li><a href="#en-s8">Medical Disclaimer</a></li>
+        <li><a href="#en-s9">Intellectual Property</a></li>
+        <li><a href="#en-s10">Limitation of Liability</a></li>
+        <li><a href="#en-s11">Governing Law</a></li>
+        <li><a href="#en-s12">Changes to Terms</a></li>
+        <li><a href="#en-s13">Contact</a></li>
+      </ol>
+    </div>
+
+    <div class="section" id="en-s1">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using the NutriTrace mobile application (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+      <p>These Terms constitute a legal agreement between you and Alexandre Zanaty ("we," "us," or "our"), the developer of NutriTrace.</p>
+    </div>
+
+    <div class="section" id="en-s2">
+      <h2>2. Description of Service</h2>
+      <p>NutriTrace is a nutrition tracking application that provides:</p>
+      <ul>
+        <li>Calorie and macronutrient tracking</li>
+        <li>AI-powered meal planning</li>
+        <li>AI recipe generation</li>
+        <li>Meal scanning via camera</li>
+        <li>Water intake tracking</li>
+        <li>Weight progress monitoring</li>
+        <li>Goal setting and progress analytics</li>
+      </ul>
+      <p>The App uses artificial intelligence and nutritional databases to provide estimates. Results are informational only and not a substitute for professional medical or dietary advice.</p>
+    </div>
+
+    <div class="section" id="en-s3">
+      <h2>3. Eligibility</h2>
+      <p>You must be at least 13 years of age to use NutriTrace. By using the App, you represent that you are 13 or older. If you are under 18, you must have parental or guardian consent.</p>
+    </div>
+
+    <div class="section" id="en-s4">
+      <h2>4. Subscriptions</h2>
+      <div class="highlight-box">
+        <strong>NutriTrace Premium</strong> — €3.99 / month (auto-renewable)<br/>
+        Provides unlimited access to AI meal plans, premium recipe generation, unlimited meal scans, and advanced analytics.
+      </div>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Billing</h3>
+      <ul>
+        <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
+        <li>Subscriptions automatically renew each month unless cancelled at least 24 hours before the end of the current period.</li>
+        <li>Your account will be charged for renewal within 24 hours before the end of the current period.</li>
+        <li>The renewal price is shown in the App before purchase and may change with 30 days' prior notice.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Cancellation</h3>
+      <ul>
+        <li>You may cancel your subscription at any time via your Apple ID account settings (Settings → [Your Name] → Subscriptions).</li>
+        <li>Cancellation takes effect at the end of the current billing period — you will not be refunded for unused time.</li>
+        <li>We do not process refunds directly; all billing is managed by Apple through the App Store.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Free Trial</h3>
+      <p>If a free trial is offered, it will be stated clearly in the App before purchase. Unused portions of a free trial period are forfeited upon purchase of a subscription.</p>
+    </div>
+
+    <div class="section" id="en-s5">
+      <h2>5. Credits (Consumable)</h2>
+      <div class="warning-box">
+        <strong>Important:</strong> Credits are consumable in-app purchases. They are non-refundable and do not expire, but they are not transferable to other accounts.
+      </div>
+      <p>Credits can be purchased in packs and are used to generate AI recipes beyond monthly limits. Credit packs available:</p>
+      <ul>
+        <li><strong>3 Credits</strong> — €1.99</li>
+        <li><strong>10 Credits</strong> — €5.99</li>
+      </ul>
+      <ul>
+        <li>Credits are deducted when you generate an AI recipe.</li>
+        <li>Credits are not refundable under any circumstances, including account deletion.</li>
+        <li>Credits carry over month to month and do not expire.</li>
+        <li>Credits cannot be exchanged for cash or transferred to other users.</li>
+        <li>If your account is terminated for a violation of these Terms, any unused credits are forfeited.</li>
+      </ul>
+      <p>All credit purchases are processed by Apple and subject to Apple's purchase policies.</p>
+    </div>
+
+    <div class="section" id="en-s6">
+      <h2>6. Free Plan Limits</h2>
+      <p>The free plan includes limited access to App features with the following restrictions:</p>
+      <ul>
+        <li>3 AI recipes per month</li>
+        <li>5 meal scans per month</li>
+        <li>10 food database lookups per day</li>
+        <li>Basic calorie tracking (unlimited)</li>
+        <li>Basic water and weight tracking (unlimited)</li>
+      </ul>
+      <p>We reserve the right to adjust free plan limits at any time with reasonable notice.</p>
+    </div>
+
+    <div class="section" id="en-s7">
+      <h2>7. User Responsibilities</h2>
+      <p>By using NutriTrace, you agree to:</p>
+      <ul>
+        <li>Provide accurate information when setting up your profile and goals</li>
+        <li>Use the App only for lawful, personal, non-commercial purposes</li>
+        <li>Not attempt to reverse engineer, decompile, or circumvent any part of the App</li>
+        <li>Not use automated tools, bots, or scripts to access the App</li>
+        <li>Not share your account credentials with third parties</li>
+        <li>Not attempt to exploit, hack, or disrupt the App or its servers</li>
+        <li>Comply with all applicable laws in your jurisdiction</li>
+      </ul>
+      <p>We reserve the right to suspend or terminate accounts that violate these responsibilities.</p>
+    </div>
+
+    <div class="section" id="en-s8">
+      <h2>8. Medical Disclaimer</h2>
+      <div class="warning-box">
+        <strong>NutriTrace is not a medical device and does not provide medical advice.</strong> The calorie estimates, nutritional data, and AI-generated recommendations are for informational purposes only.
+      </div>
+      <ul>
+        <li>Always consult a qualified healthcare professional before starting a diet or exercise program.</li>
+        <li>Do not use the App as a substitute for professional medical, nutritional, or fitness advice.</li>
+        <li>Calorie and macronutrient values are estimates and may vary from actual values.</li>
+        <li>We are not responsible for any health outcomes resulting from use of the App.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="en-s9">
+      <h2>9. Intellectual Property</h2>
+      <p>All content, design, code, and materials in NutriTrace are the property of Alexandre Zanaty and are protected by copyright, trademark, and other intellectual property laws.</p>
+      <p>You are granted a limited, non-exclusive, non-transferable, revocable licence to use the App for personal, non-commercial purposes. You may not copy, distribute, or create derivative works from any part of the App without prior written consent.</p>
+      <p>AI-generated recipes and meal plans produced in the App are for your personal use only.</p>
+    </div>
+
+    <div class="section" id="en-s10">
+      <h2>10. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law:</p>
+      <ul>
+        <li>NutriTrace is provided "as is" without warranties of any kind, express or implied.</li>
+        <li>We do not warrant that the App will be uninterrupted, error-free, or free of viruses.</li>
+        <li>We shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App.</li>
+        <li>Our total liability to you for any claim shall not exceed the amount you paid for the App in the 12 months preceding the claim.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="en-s11">
+      <h2>11. Governing Law</h2>
+      <p>These Terms are governed by the laws of <strong>France</strong>, without regard to its conflict of law principles. Any dispute arising from these Terms or your use of NutriTrace shall be subject to the exclusive jurisdiction of the courts of France.</p>
+      <p>If you are a consumer in the European Union, you may also benefit from mandatory consumer protection provisions of the law of your country of residence.</p>
+    </div>
+
+    <div class="section" id="en-s12">
+      <h2>12. Changes to Terms</h2>
+      <p>We may update these Terms from time to time. We will notify you of significant changes by updating the "Last updated" date and, where appropriate, by sending a notification via the App. Your continued use of NutriTrace after changes take effect constitutes acceptance of the revised Terms.</p>
+    </div>
+
+    <div class="section" id="en-s13">
+      <h2>13. Contact</h2>
+      <p>If you have questions about these Terms, please contact us at:</p>
+      <div class="highlight-box">
+        <strong>Email:</strong> <a href="mailto:support@nutritrace.app">support@nutritrace.app</a><br/>
+        <strong>Website:</strong> <a href="https://nutritrace.app">nutritrace.app</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /lang-en -->
+
+<!-- ─── FR ─── -->
+<div class="lp-block" id="lang-fr">
+
+  <div class="page-header">
+    <h1>Conditions d'Utilisation</h1>
+    <p class="updated">Dernière mise à jour : 12 mai 2026</p>
+  </div>
+
+  <div class="content-wrap">
+    <div class="toc">
+      <h3>Sommaire</h3>
+      <ol>
+        <li><a href="#fr-s1">Acceptation des conditions</a></li>
+        <li><a href="#fr-s2">Description du service</a></li>
+        <li><a href="#fr-s3">Éligibilité</a></li>
+        <li><a href="#fr-s4">Abonnements</a></li>
+        <li><a href="#fr-s5">Crédits (consommables)</a></li>
+        <li><a href="#fr-s6">Limites du plan gratuit</a></li>
+        <li><a href="#fr-s7">Responsabilités de l'utilisateur</a></li>
+        <li><a href="#fr-s8">Avertissement médical</a></li>
+        <li><a href="#fr-s9">Propriété intellectuelle</a></li>
+        <li><a href="#fr-s10">Limitation de responsabilité</a></li>
+        <li><a href="#fr-s11">Droit applicable</a></li>
+        <li><a href="#fr-s12">Modifications des conditions</a></li>
+        <li><a href="#fr-s13">Contact</a></li>
+      </ol>
+    </div>
+
+    <div class="section" id="fr-s1">
+      <h2>1. Acceptation des conditions</h2>
+      <p>En téléchargeant, installant ou utilisant l'application mobile NutriTrace (l'« Application »), vous acceptez d'être lié par ces Conditions d'Utilisation (les « Conditions »). Si vous n'acceptez pas ces Conditions, veuillez ne pas utiliser l'Application.</p>
+      <p>Ces Conditions constituent un accord légal entre vous et Alexandre Zanaty (« nous », « notre »), le développeur de NutriTrace.</p>
+    </div>
+
+    <div class="section" id="fr-s2">
+      <h2>2. Description du service</h2>
+      <p>NutriTrace est une application de suivi nutritionnel qui propose :</p>
+      <ul>
+        <li>Suivi des calories et macronutriments</li>
+        <li>Planification de repas par intelligence artificielle</li>
+        <li>Génération de recettes par IA</li>
+        <li>Analyse de repas par caméra</li>
+        <li>Suivi de la consommation d'eau</li>
+        <li>Suivi de l'évolution du poids</li>
+        <li>Définition d'objectifs et analyses de progression</li>
+      </ul>
+      <p>L'Application utilise l'intelligence artificielle et des bases de données nutritionnelles pour fournir des estimations. Les résultats sont fournis à titre informatif uniquement et ne remplacent pas l'avis d'un professionnel de santé ou d'un diététicien.</p>
+    </div>
+
+    <div class="section" id="fr-s3">
+      <h2>3. Éligibilité</h2>
+      <p>Vous devez avoir au moins 13 ans pour utiliser NutriTrace. En utilisant l'Application, vous déclarez avoir 13 ans ou plus. Si vous avez moins de 18 ans, vous devez avoir le consentement d'un parent ou tuteur légal.</p>
+    </div>
+
+    <div class="section" id="fr-s4">
+      <h2>4. Abonnements</h2>
+      <div class="highlight-box">
+        <strong>NutriTrace Premium</strong> — 3,99 € / mois (renouvelable automatiquement)<br/>
+        Accès illimité aux plans repas IA, à la génération premium de recettes, aux analyses de repas illimitées et aux analyses avancées.
+      </div>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Facturation</h3>
+      <ul>
+        <li>Le paiement est débité sur votre compte Apple ID lors de la confirmation de l'achat.</li>
+        <li>Les abonnements se renouvellent automatiquement chaque mois, sauf annulation au moins 24 heures avant la fin de la période en cours.</li>
+        <li>Votre compte sera débité pour le renouvellement dans les 24 heures précédant la fin de la période en cours.</li>
+        <li>Le prix de renouvellement est affiché dans l'Application avant l'achat et peut être modifié moyennant un préavis de 30 jours.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Résiliation</h3>
+      <ul>
+        <li>Vous pouvez annuler votre abonnement à tout moment via les paramètres de votre compte Apple ID (Réglages → [Votre nom] → Abonnements).</li>
+        <li>L'annulation prend effet à la fin de la période de facturation en cours — aucun remboursement ne sera effectué pour le temps non utilisé.</li>
+        <li>Nous ne traitons pas les remboursements directement ; toute la facturation est gérée par Apple via l'App Store.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">Essai gratuit</h3>
+      <p>Si un essai gratuit est proposé, cela sera clairement indiqué dans l'Application avant l'achat. Les portions non utilisées d'une période d'essai gratuit sont perdues lors de l'achat d'un abonnement.</p>
+    </div>
+
+    <div class="section" id="fr-s5">
+      <h2>5. Crédits (consommables)</h2>
+      <div class="warning-box">
+        <strong>Important :</strong> Les crédits sont des achats consommables intégrés à l'application. Ils ne sont pas remboursables et n'expirent pas, mais ils ne sont pas transférables à d'autres comptes.
+      </div>
+      <p>Les crédits peuvent être achetés en lots et sont utilisés pour générer des recettes IA au-delà des limites mensuelles. Lots de crédits disponibles :</p>
+      <ul>
+        <li><strong>3 crédits</strong> — 1,99 €</li>
+        <li><strong>10 crédits</strong> — 5,99 €</li>
+      </ul>
+      <ul>
+        <li>Les crédits sont déduits à chaque génération de recette IA.</li>
+        <li>Les crédits ne sont remboursables en aucune circonstance, y compris en cas de suppression du compte.</li>
+        <li>Les crédits se reportent de mois en mois et n'expirent pas.</li>
+        <li>Les crédits ne peuvent pas être échangés contre de l'argent ni transférés à d'autres utilisateurs.</li>
+        <li>Si votre compte est résilié pour violation de ces Conditions, les crédits non utilisés sont perdus.</li>
+      </ul>
+      <p>Tous les achats de crédits sont traités par Apple et soumis aux politiques d'achat d'Apple.</p>
+    </div>
+
+    <div class="section" id="fr-s6">
+      <h2>6. Limites du plan gratuit</h2>
+      <p>Le plan gratuit offre un accès limité aux fonctionnalités de l'Application avec les restrictions suivantes :</p>
+      <ul>
+        <li>3 recettes IA par mois</li>
+        <li>5 analyses de repas par mois</li>
+        <li>10 recherches dans la base de données alimentaires par jour</li>
+        <li>Suivi calorique de base (illimité)</li>
+        <li>Suivi de l'eau et du poids (illimité)</li>
+      </ul>
+      <p>Nous nous réservons le droit de modifier les limites du plan gratuit à tout moment avec un préavis raisonnable.</p>
+    </div>
+
+    <div class="section" id="fr-s7">
+      <h2>7. Responsabilités de l'utilisateur</h2>
+      <p>En utilisant NutriTrace, vous acceptez de :</p>
+      <ul>
+        <li>Fournir des informations exactes lors de la configuration de votre profil et de vos objectifs</li>
+        <li>Utiliser l'Application uniquement à des fins légales, personnelles et non commerciales</li>
+        <li>Ne pas tenter de procéder à l'ingénierie inverse, décompiler ou contourner toute partie de l'Application</li>
+        <li>Ne pas utiliser d'outils automatisés, robots ou scripts pour accéder à l'Application</li>
+        <li>Ne pas partager vos identifiants de compte avec des tiers</li>
+        <li>Ne pas tenter d'exploiter, pirater ou perturber l'Application ou ses serveurs</li>
+        <li>Vous conformer à toutes les lois applicables dans votre juridiction</li>
+      </ul>
+      <p>Nous nous réservons le droit de suspendre ou de résilier les comptes qui enfreignent ces responsabilités.</p>
+    </div>
+
+    <div class="section" id="fr-s8">
+      <h2>8. Avertissement médical</h2>
+      <div class="warning-box">
+        <strong>NutriTrace n'est pas un dispositif médical et ne fournit pas de conseils médicaux.</strong> Les estimations caloriques, les données nutritionnelles et les recommandations générées par IA sont fournies à titre informatif uniquement.
+      </div>
+      <ul>
+        <li>Consultez toujours un professionnel de santé qualifié avant de commencer un régime ou un programme d'exercice.</li>
+        <li>N'utilisez pas l'Application en remplacement d'un avis médical, nutritionnel ou de remise en forme professionnel.</li>
+        <li>Les valeurs caloriques et les macronutriments sont des estimations et peuvent différer des valeurs réelles.</li>
+        <li>Nous ne sommes pas responsables des résultats de santé découlant de l'utilisation de l'Application.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="fr-s9">
+      <h2>9. Propriété intellectuelle</h2>
+      <p>Tout le contenu, design, code et matériaux de NutriTrace sont la propriété d'Alexandre Zanaty et sont protégés par le droit d'auteur, les marques déposées et d'autres lois sur la propriété intellectuelle.</p>
+      <p>Vous bénéficiez d'une licence limitée, non exclusive, non transférable et révocable pour utiliser l'Application à des fins personnelles et non commerciales. Vous ne pouvez pas copier, distribuer ou créer des œuvres dérivées de toute partie de l'Application sans consentement écrit préalable.</p>
+      <p>Les recettes et plans de repas générés par l'IA dans l'Application sont destinés à votre usage personnel uniquement.</p>
+    </div>
+
+    <div class="section" id="fr-s10">
+      <h2>10. Limitation de responsabilité</h2>
+      <p>Dans la mesure maximale permise par la loi applicable :</p>
+      <ul>
+        <li>NutriTrace est fourni « tel quel » sans garanties d'aucune sorte, expresses ou implicites.</li>
+        <li>Nous ne garantissons pas que l'Application sera ininterrompue, sans erreur ou sans virus.</li>
+        <li>Nous ne serons pas responsables des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs découlant de votre utilisation de l'Application.</li>
+        <li>Notre responsabilité totale envers vous pour toute réclamation ne dépassera pas le montant que vous avez payé pour l'Application au cours des 12 mois précédant la réclamation.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="fr-s11">
+      <h2>11. Droit applicable</h2>
+      <p>Ces Conditions sont régies par le droit <strong>français</strong>, sans égard à ses principes de conflit de lois. Tout litige découlant de ces Conditions ou de votre utilisation de NutriTrace sera soumis à la juridiction exclusive des tribunaux français.</p>
+      <p>Si vous êtes un consommateur dans l'Union européenne, vous pouvez également bénéficier des dispositions impératives de protection des consommateurs de la loi de votre pays de résidence.</p>
+    </div>
+
+    <div class="section" id="fr-s12">
+      <h2>12. Modifications des conditions</h2>
+      <p>Nous pouvons mettre à jour ces Conditions de temps à autre. Nous vous informerons des modifications importantes en mettant à jour la date de « Dernière mise à jour » et, le cas échéant, en envoyant une notification via l'Application. Votre utilisation continue de NutriTrace après l'entrée en vigueur des modifications constitue votre acceptation des Conditions révisées.</p>
+    </div>
+
+    <div class="section" id="fr-s13">
+      <h2>13. Contact</h2>
+      <p>Si vous avez des questions concernant ces Conditions, veuillez nous contacter à :</p>
+      <div class="highlight-box">
+        <strong>E-mail :</strong> <a href="mailto:support@nutritrace.app">support@nutritrace.app</a><br/>
+        <strong>Site web :</strong> <a href="https://nutritrace.app">nutritrace.app</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /lang-fr -->
+
+<!-- ─── AR ─── -->
+<div class="lp-block" id="lang-ar" dir="rtl" style="font-family: 'Segoe UI', Tahoma, Arial, sans-serif;">
+
+  <div class="page-header">
+    <h1>شروط الاستخدام</h1>
+    <p class="updated">آخر تحديث: 12 مايو 2026</p>
+  </div>
+
+  <div class="content-wrap">
+    <div class="toc">
+      <h3>المحتويات</h3>
+      <ol>
+        <li><a href="#ar-s1">قبول الشروط</a></li>
+        <li><a href="#ar-s2">وصف الخدمة</a></li>
+        <li><a href="#ar-s3">الأهلية</a></li>
+        <li><a href="#ar-s4">الاشتراكات</a></li>
+        <li><a href="#ar-s5">الرصيد (قابل للاستهلاك)</a></li>
+        <li><a href="#ar-s6">حدود الخطة المجانية</a></li>
+        <li><a href="#ar-s7">مسؤوليات المستخدم</a></li>
+        <li><a href="#ar-s8">إخلاء المسؤولية الطبية</a></li>
+        <li><a href="#ar-s9">الملكية الفكرية</a></li>
+        <li><a href="#ar-s10">تحديد المسؤولية</a></li>
+        <li><a href="#ar-s11">القانون الحاكم</a></li>
+        <li><a href="#ar-s12">التغييرات على الشروط</a></li>
+        <li><a href="#ar-s13">التواصل</a></li>
+      </ol>
+    </div>
+
+    <div class="section" id="ar-s1">
+      <h2>1. قبول الشروط</h2>
+      <p>بتنزيل أو تثبيت أو استخدام تطبيق NutriTrace للهاتف المحمول ("التطبيق")، فإنك توافق على الالتزام بشروط الاستخدام هذه ("الشروط"). إذا كنت لا توافق على هذه الشروط، يُرجى عدم استخدام التطبيق.</p>
+      <p>تُشكّل هذه الشروط اتفاقية قانونية بينك وبين Alexandre Zanaty ("نحن" أو "لنا")، مطوّر NutriTrace.</p>
+    </div>
+
+    <div class="section" id="ar-s2">
+      <h2>2. وصف الخدمة</h2>
+      <p>NutriTrace هو تطبيق لتتبع التغذية يوفر:</p>
+      <ul>
+        <li>تتبع السعرات الحرارية والمغذيات الكبرى</li>
+        <li>تخطيط الوجبات بالذكاء الاصطناعي</li>
+        <li>توليد الوصفات بالذكاء الاصطناعي</li>
+        <li>مسح الوجبات عبر الكاميرا</li>
+        <li>تتبع استهلاك الماء</li>
+        <li>رصد تقدم الوزن</li>
+        <li>تحديد الأهداف وتحليل التقدم</li>
+      </ul>
+      <p>يستخدم التطبيق الذكاء الاصطناعي وقواعد البيانات الغذائية لتقديم تقديرات. النتائج للأغراض المعلوماتية فقط وليست بديلاً عن المشورة الطبية أو الغذائية المتخصصة.</p>
+    </div>
+
+    <div class="section" id="ar-s3">
+      <h2>3. الأهلية</h2>
+      <p>يجب أن يكون عمرك 13 عامًا على الأقل لاستخدام NutriTrace. باستخدام التطبيق، فإنك تُقرّ بأنك في سن 13 أو أكبر. إذا كنت دون سن 18، يجب أن تحصل على موافقة أحد الوالدين أو الوصي القانوني.</p>
+    </div>
+
+    <div class="section" id="ar-s4">
+      <h2>4. الاشتراكات</h2>
+      <div class="highlight-box">
+        <strong>NutriTrace Premium</strong> — 3.99 يورو / شهر (يتجدد تلقائيًا)<br/>
+        يوفر وصولاً غير محدود لخطط الوجبات بالذكاء الاصطناعي، وتوليد الوصفات المميزة، ومسح الوجبات غير المحدود، والتحليلات المتقدمة.
+      </div>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">الفوترة</h3>
+      <ul>
+        <li>يُخصم الدفع من حساب Apple ID الخاص بك عند تأكيد الشراء.</li>
+        <li>تتجدد الاشتراكات تلقائيًا كل شهر ما لم يتم إلغاؤها قبل 24 ساعة على الأقل من نهاية الفترة الحالية.</li>
+        <li>سيُفوتر حسابك للتجديد خلال 24 ساعة قبل نهاية الفترة الحالية.</li>
+        <li>يظهر سعر التجديد في التطبيق قبل الشراء وقد يتغير مع إشعار مسبق لمدة 30 يومًا.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">الإلغاء</h3>
+      <ul>
+        <li>يمكنك إلغاء اشتراكك في أي وقت عبر إعدادات حساب Apple ID (الإعدادات ← [اسمك] ← الاشتراكات).</li>
+        <li>يسري الإلغاء في نهاية فترة الفوترة الحالية — لن يتم رد المبالغ المدفوعة عن الوقت غير المستخدم.</li>
+        <li>لا نعالج المبالغ المستردة مباشرةً؛ تُدار جميع عمليات الفوترة عبر Apple من خلال متجر التطبيقات.</li>
+      </ul>
+      <h3 style="margin:16px 0 8px;font-size:1rem;font-weight:700;color:var(--text)">التجربة المجانية</h3>
+      <p>إذا عُرضت تجربة مجانية، سيُذكر ذلك بوضوح في التطبيق قبل الشراء. تضيع الأجزاء غير المستخدمة من فترة التجربة المجانية عند شراء اشتراك.</p>
+    </div>
+
+    <div class="section" id="ar-s5">
+      <h2>5. الرصيد (قابل للاستهلاك)</h2>
+      <div class="warning-box">
+        <strong>تنبيه مهم:</strong> الرصيد عبارة عن مشتريات قابلة للاستهلاك داخل التطبيق. لا يمكن استرداده ولا ينتهي صلاحيته، لكنه غير قابل للنقل إلى حسابات أخرى.
+      </div>
+      <p>يمكن شراء الرصيد في حزم ويُستخدم لتوليد وصفات الذكاء الاصطناعي بما يتجاوز الحدود الشهرية. حزم الرصيد المتاحة:</p>
+      <ul>
+        <li><strong>3 رصيد</strong> — 1.99 يورو</li>
+        <li><strong>10 رصيد</strong> — 5.99 يورو</li>
+      </ul>
+      <ul>
+        <li>يُخصم الرصيد عند كل توليد وصفة بالذكاء الاصطناعي.</li>
+        <li>لا يمكن استرداد الرصيد تحت أي ظرف، بما في ذلك حذف الحساب.</li>
+        <li>يتراكم الرصيد من شهر لآخر ولا ينتهي صلاحيته.</li>
+        <li>لا يمكن استبدال الرصيد بنقود أو نقله إلى مستخدمين آخرين.</li>
+        <li>إذا تم إنهاء حسابك لانتهاك هذه الشروط، فإن الرصيد غير المستخدم يُفقد.</li>
+      </ul>
+      <p>تُعالج جميع مشتريات الرصيد عبر Apple وتخضع لسياسات الشراء الخاصة بـ Apple.</p>
+    </div>
+
+    <div class="section" id="ar-s6">
+      <h2>6. حدود الخطة المجانية</h2>
+      <p>تتضمن الخطة المجانية وصولاً محدودًا إلى ميزات التطبيق مع القيود التالية:</p>
+      <ul>
+        <li>3 وصفات ذكاء اصطناعي شهريًا</li>
+        <li>5 عمليات مسح وجبات شهريًا</li>
+        <li>10 عمليات بحث في قاعدة بيانات الطعام يوميًا</li>
+        <li>تتبع السعرات الحرارية الأساسي (غير محدود)</li>
+        <li>تتبع الماء والوزن الأساسي (غير محدود)</li>
+      </ul>
+      <p>نحتفظ بالحق في تعديل حدود الخطة المجانية في أي وقت مع إشعار معقول.</p>
+    </div>
+
+    <div class="section" id="ar-s7">
+      <h2>7. مسؤوليات المستخدم</h2>
+      <p>باستخدام NutriTrace، توافق على:</p>
+      <ul>
+        <li>تقديم معلومات دقيقة عند إعداد ملفك الشخصي وأهدافك</li>
+        <li>استخدام التطبيق لأغراض شخصية وغير تجارية ومشروعة فقط</li>
+        <li>عدم محاولة الهندسة العكسية أو تفكيك أي جزء من التطبيق</li>
+        <li>عدم استخدام أدوات آلية أو روبوتات أو برامج نصية للوصول إلى التطبيق</li>
+        <li>عدم مشاركة بيانات اعتماد حسابك مع أطراف ثالثة</li>
+        <li>عدم محاولة استغلال أو اختراق أو تعطيل التطبيق أو خوادمه</li>
+        <li>الامتثال لجميع القوانين المعمول بها في ولايتك القضائية</li>
+      </ul>
+      <p>نحتفظ بالحق في تعليق أو إنهاء الحسابات التي تنتهك هذه المسؤوليات.</p>
+    </div>
+
+    <div class="section" id="ar-s8">
+      <h2>8. إخلاء المسؤولية الطبية</h2>
+      <div class="warning-box">
+        <strong>NutriTrace ليس جهازًا طبيًا ولا يقدم مشورة طبية.</strong> تقديرات السعرات الحرارية والبيانات الغذائية والتوصيات التي ينشئها الذكاء الاصطناعي للأغراض المعلوماتية فقط.
+      </div>
+      <ul>
+        <li>استشر دائمًا متخصصًا في الرعاية الصحية المؤهل قبل البدء في نظام غذائي أو برنامج تمارين.</li>
+        <li>لا تستخدم التطبيق بديلاً عن المشورة الطبية أو الغذائية أو المتعلقة بالياقة البدنية المتخصصة.</li>
+        <li>قيم السعرات الحرارية والمغذيات الكبرى تقديرية وقد تختلف عن القيم الفعلية.</li>
+        <li>لسنا مسؤولين عن أي نتائج صحية ناتجة عن استخدام التطبيق.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="ar-s9">
+      <h2>9. الملكية الفكرية</h2>
+      <p>جميع المحتويات والتصميم والكود والمواد في NutriTrace هي ملك لـ Alexandre Zanaty وتحميها قوانين حقوق النشر والعلامات التجارية والملكية الفكرية الأخرى.</p>
+      <p>يُمنح لك ترخيص محدود وغير حصري وغير قابل للنقل وقابل للإلغاء لاستخدام التطبيق لأغراض شخصية وغير تجارية. لا يجوز لك نسخ أو توزيع أو إنشاء أعمال مشتقة من أي جزء من التطبيق دون موافقة كتابية مسبقة.</p>
+      <p>الوصفات وخطط الوجبات التي ينشئها الذكاء الاصطناعي في التطبيق مخصصة للاستخدام الشخصي فقط.</p>
+    </div>
+
+    <div class="section" id="ar-s10">
+      <h2>10. تحديد المسؤولية</h2>
+      <p>بالقدر الأقصى المسموح به بموجب القانون المعمول به:</p>
+      <ul>
+        <li>يُقدَّم NutriTrace "كما هو" دون ضمانات من أي نوع، صريحة أو ضمنية.</li>
+        <li>لا نضمن أن التطبيق سيكون بلا انقطاع أو بلا أخطاء أو بلا فيروسات.</li>
+        <li>لن نكون مسؤولين عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية ناتجة عن استخدامك للتطبيق.</li>
+        <li>لن تتجاوز مسؤوليتنا الإجمالية تجاهك عن أي مطالبة المبلغ الذي دفعته مقابل التطبيق خلال 12 شهرًا قبل المطالبة.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="ar-s11">
+      <h2>11. القانون الحاكم</h2>
+      <p>تخضع هذه الشروط لقوانين <strong>فرنسا</strong>، بصرف النظر عن مبادئ تعارض القوانين فيها. يخضع أي نزاع ينشأ عن هذه الشروط أو استخدامك لـ NutriTrace للاختصاص القضائي الحصري لمحاكم فرنسا.</p>
+      <p>إذا كنت مستهلكًا في الاتحاد الأوروبي، فقد تستفيد أيضًا من الأحكام الإلزامية لحماية المستهلك في قانون بلد إقامتك.</p>
+    </div>
+
+    <div class="section" id="ar-s12">
+      <h2>12. التغييرات على الشروط</h2>
+      <p>قد نقوم بتحديث هذه الشروط من وقت لآخر. سنُعلمك بالتغييرات الهامة بتحديث تاريخ "آخر تحديث" وعند الاقتضاء، بإرسال إشعار عبر التطبيق. يُعدّ استمرارك في استخدام NutriTrace بعد سريان التغييرات قبولاً منك للشروط المُعدَّلة.</p>
+    </div>
+
+    <div class="section" id="ar-s13">
+      <h2>13. التواصل</h2>
+      <p>إذا كانت لديك أسئلة حول هذه الشروط، يُرجى التواصل معنا على:</p>
+      <div class="highlight-box">
+        <strong>البريد الإلكتروني:</strong> <a href="mailto:support@nutritrace.app">support@nutritrace.app</a><br/>
+        <strong>الموقع الإلكتروني:</strong> <a href="https://nutritrace.app">nutritrace.app</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /lang-ar -->
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><span>🥗</span> NutriTrace</div>
+      <p class="lp-block active" id="foot-tag-en">AI-powered nutrition companion for iOS. Track calories, build healthy habits, and reach your goals.</p>
+      <p class="lp-block" id="foot-tag-fr">Votre compagnon nutrition IA pour iOS. Suivez vos calories, adoptez de bonnes habitudes et atteignez vos objectifs.</p>
+      <p class="lp-block" id="foot-tag-ar">رفيقك الذكي للتغذية على iOS. تتبع السعرات الحرارية وابنِ عادات صحية وحقق أهدافك.</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="lp-block active" id="foot-h-legal-en">Legal</h4>
+      <h4 class="lp-block" id="foot-h-legal-fr">Légal</h4>
+      <h4 class="lp-block" id="foot-h-legal-ar">قانوني</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy / Politique de confidentialité</a></li>
+        <li><a href="terms.html">Terms of Use / Conditions d'utilisation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="lp-block active" id="foot-h-more-en">More</h4>
+      <h4 class="lp-block" id="foot-h-more-fr">Plus</h4>
+      <h4 class="lp-block" id="foot-h-more-ar">المزيد</h4>
+      <ul>
+        <li><a href="support.html">Support / FAQ</a></li>
+        <li><a href="mailto:support@nutritrace.app">support@nutritrace.app</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Alexandre Zanaty · NutriTrace</span>
+    <span>Powered by Claude AI (Anthropic)</span>
+  </div>
+</footer>
+
+<script>
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Direction
+    const isAr = lang === 'ar';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+    // Show/hide lang blocks
+    ['en','fr','ar'].forEach(l => {
+      const el = document.getElementById('lang-' + l);
+      if (el) el.classList.toggle('active', l === lang);
+    });
+
+    // Toggle nav lp-blocks
+    document.querySelectorAll('[id^="nav-features-"], [id^="nav-pricing-"], [id^="nav-support-"]').forEach(el => {
+      const suffix = el.id.split('-').pop();
+      el.classList.toggle('active', suffix === lang);
+    });
+
+    // Footer blocks
+    ['foot-tag-en','foot-tag-fr','foot-tag-ar',
+     'foot-h-legal-en','foot-h-legal-fr','foot-h-legal-ar',
+     'foot-h-more-en','foot-h-more-fr','foot-h-more-ar'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', id.endsWith(lang));
+    });
+
+    // Pills
+    document.querySelectorAll('.lang-pill').forEach((btn, i) => {
+      const l = ['en','fr','ar'][i];
+      btn.classList.toggle('active', l === lang);
+    });
+  }
+
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Detect browser language on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const nav = navigator.language || navigator.userLanguage || 'en';
+    if (nav.startsWith('fr')) setLang('fr');
+    else if (nav.startsWith('ar')) setLang('ar');
+    else setLang('en');
+  });
+</script>
+</body>
+</html>
