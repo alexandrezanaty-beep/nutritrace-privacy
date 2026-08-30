@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!-- TERMS_VERSION: 2 — last synced 2026-08-29 -->
+<!-- To update: revise Sections 3 and 9 (advertising/ATT) in all three language panels (EN/FR/AR). -->
+<!-- Also update legal-version.json at site root and TERMS_VERSION in constants/legal.ts. -->
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
@@ -76,7 +79,7 @@
 
   <!-- ═══ ENGLISH ═══ -->
   <div class="lang-panel visible" data-lang="en">
-    <div class="effective">Effective date: May 1, 2026</div>
+    <div class="effective">Effective date: 29 August 2026</div>
     <div class="card">
       <h1>Privacy Policy</h1>
       <p class="intro">NutriTrace ("we", "our", or "us") is committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and your rights under GDPR and applicable privacy laws. Controller: Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
@@ -93,7 +96,7 @@
         <li><strong>Usage data:</strong> feature usage, crash reports (anonymous).</li>
         <li><strong>Purchase data:</strong> subscription status and credit balance via RevenueCat. We never store payment card details.</li>
       </ul>
-      <p>We do not collect precise location, device contacts, or advertising identifiers beyond what Apple's App Tracking Transparency framework permits.</p>
+      <p>We do not collect precise location or device contacts. For free and guest accounts, the Google Mobile Ads SDK may collect advertising identifiers and other device data to serve advertisements — see 'Advertising and Consent' below for details.</p>
     </div>
     <div class="card">
       <h2>2. Legal Basis for Processing (GDPR)</h2>
@@ -111,6 +114,7 @@
         <li><strong>RevenueCat</strong> – subscription & in-app purchase management. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
         <li><strong>Apple Inc.</strong> – App Store distribution, Apple Sign-In, in-app purchases.</li>
         <li><strong>Google LLC</strong> – Google Sign-In. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        <li><strong>Google AdMob</strong> (Google Ireland Limited) – advertisement serving for free and guest accounts. Advertising identifiers, device information, IP-derived location, and ad interaction data may be collected. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
       </ul>
       <p>We do not sell your data to third parties. Ever.</p>
     </div>
@@ -147,11 +151,31 @@
       <p>On iOS 14+, we request App Tracking Transparency permission. If you decline, the app works fully — we only use tracking to help measure the effectiveness of our App Store campaigns. You can change this in iOS Settings → Privacy → Tracking.</p>
     </div>
     <div class="card">
-      <h2>10. Changes to This Policy</h2>
-      <p>Material changes will be notified via in-app notification. The effective date above shows the latest update.</p>
+      <h2>10. Advertising and Consent</h2>
+      <p>The free version of NutriTrace displays advertisements provided by Google AdMob (Google Ireland Limited). To serve advertisements, the Google Mobile Ads SDK collects and transmits the following to Google:</p>
+      <ul>
+        <li>Device advertising identifiers (IDFA on iOS)</li>
+        <li>Device information: model, operating system version, screen size, language, and time zone</li>
+        <li>Your IP address, used to determine your approximate location at country or city level</li>
+        <li>Application identifier and version</li>
+        <li>Advertising interaction data: whether an advertisement was displayed, viewed, or clicked</li>
+        <li>Network information: connection type and mobile carrier</li>
+      </ul>
+      <p><strong>Personalised and non-personalised advertising</strong></p>
+      <p>If you consent to personalised advertising, your advertising identifier may be used by Google to build an interest profile across applications and to serve advertisements based on that profile.</p>
+      <p>If you refuse, advertisements are served on a contextual basis only. Please note that the categories of data listed above are still collected and transmitted to Google; what changes is that your advertising identifier is no longer used for cross-application profiling or targeting. Google may continue to use limited identifier data for fraud prevention, frequency capping within this application, and aggregate reporting.</p>
+      <p><strong>Managing your choices</strong></p>
+      <p>Users located in the European Economic Area are presented with Google's consent form when the application is first launched, and may review or change their choices at any time via Profile → Ad Preferences. Users located outside the European Economic Area may manage advertising tracking through their device settings (iOS: Settings → Privacy &amp; Security → Tracking).</p>
+      <p><strong>Premium subscribers</strong></p>
+      <p>Premium subscribers are not shown advertisements, and no advertising requests are made for their accounts. However, the Google Mobile Ads SDK is included in the application for all users and performs a consent-status check when the application starts. This check transmits device identifiers, your IP address, and the application identifier to Google.</p>
+      <p>Google acts as an independent controller for the data it collects through AdMob. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
     </div>
     <div class="card">
-      <h2>11. Contact</h2>
+      <h2>11. Changes to This Policy</h2>
+      <p>For material changes to this policy, you will be asked to review and accept the updated version inside the application before you can continue using it. The effective date above shows the latest update.</p>
+    </div>
+    <div class="card">
+      <h2>12. Contact</h2>
       <div class="contact-box">
         <p><strong>NutriTrace Support</strong><br>Email: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
       </div>
@@ -160,7 +184,7 @@
 
   <!-- ═══ FRANÇAIS ═══ -->
   <div class="lang-panel" data-lang="fr">
-    <div class="effective">Date d'entrée en vigueur : 1er mai 2026</div>
+    <div class="effective">Date d'entrée en vigueur : 29 août 2026</div>
     <div class="card">
       <h1>Politique de confidentialité</h1>
       <p class="intro">NutriTrace (« nous ») s'engage à protéger vos données personnelles conformément au RGPD. Responsable du traitement : Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
@@ -189,10 +213,11 @@
       <h2>3. Services tiers</h2>
       <ul>
         <li><strong>Supabase</strong> – base de données, auth, stockage. Serveurs EU. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></li>
-        <li><strong>API Anthropic Claude</strong> – génération de recettes et scan IA. Données transitoires, non utilisées pour entraîner les modèles.</li>
-        <li><strong>RevenueCat</strong> – gestion des abonnements et achats in-app.</li>
+        <li><strong>API Anthropic Claude</strong> – génération de recettes et scan IA. Données transitoires, non utilisées pour entraîner les modèles. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></li>
+        <li><strong>RevenueCat</strong> – gestion des abonnements et achats in-app. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
         <li><strong>Apple Inc.</strong> – App Store, Apple Sign-In, achats in-app.</li>
-        <li><strong>Google LLC</strong> – Google Sign-In.</li>
+        <li><strong>Google LLC</strong> – Google Sign-In. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        <li><strong>Google AdMob</strong> (Google Ireland Limited) – diffusion de publicités pour les comptes gratuits et invités. Des identifiants publicitaires, des informations sur l'appareil, une localisation dérivée de l'adresse IP et des données d'interaction publicitaire peuvent être collectés. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
       </ul>
       <p>Nous ne vendons jamais vos données à des tiers.</p>
     </div>
@@ -229,11 +254,31 @@
       <p>Sur iOS 14+, nous demandons l'autorisation ATT. En cas de refus, l'application fonctionne intégralement. Modifiable dans Réglages iOS → Confidentialité → Suivi.</p>
     </div>
     <div class="card">
-      <h2>10. Modifications</h2>
-      <p>Les changements importants seront notifiés dans l'application. La date en haut indique la dernière mise à jour.</p>
+      <h2>10. Publicité et consentement</h2>
+      <p>La version gratuite de NutriTrace affiche des publicités fournies par Google AdMob (Google Ireland Limited). Pour diffuser des publicités, le SDK Google Mobile Ads collecte les données suivantes et les transmet à Google :</p>
+      <ul>
+        <li>Identifiants publicitaires de l'appareil (IDFA sur iOS)</li>
+        <li>Informations sur l'appareil : modèle, version du système d'exploitation, taille de l'écran, langue et fuseau horaire</li>
+        <li>Votre adresse IP, utilisée pour déterminer votre localisation approximative au niveau du pays ou de la ville</li>
+        <li>Identifiant et version de l'application</li>
+        <li>Données d'interaction avec les publicités : affichage, visionnage ou clic sur une publicité</li>
+        <li>Informations réseau : type de connexion et opérateur mobile</li>
+      </ul>
+      <p><strong>Publicité personnalisée et non personnalisée</strong></p>
+      <p>Si vous consentez à la publicité personnalisée, votre identifiant publicitaire peut être utilisé par Google pour constituer un profil d'intérêts entre applications et diffuser des publicités basées sur ce profil.</p>
+      <p>Si vous refusez, les publicités sont diffusées sur une base contextuelle uniquement. Veuillez noter que les catégories de données énumérées ci-dessus sont toujours collectées et transmises à Google ; ce qui change, c'est que votre identifiant publicitaire n'est plus utilisé pour le profilage ou le ciblage entre applications. Google peut continuer à utiliser des données d'identifiant limitées à des fins de prévention de la fraude, de limitation de la fréquence au sein de cette application et de rapports agrégés.</p>
+      <p><strong>Gestion de vos choix</strong></p>
+      <p>Les utilisateurs situés dans l'Espace économique européen se voient présenter le formulaire de consentement de Google lors du premier lancement de l'application et peuvent consulter ou modifier leurs choix à tout moment via Profil → Préférences publicitaires. Les utilisateurs situés en dehors de l'Espace économique européen peuvent gérer le suivi publicitaire via les paramètres de leur appareil (iOS : Réglages → Confidentialité et sécurité → Suivi).</p>
+      <p><strong>Abonnés Premium</strong></p>
+      <p>Les abonnés Premium ne voient pas de publicités et aucune demande publicitaire n'est effectuée pour leurs comptes. Cependant, le SDK Google Mobile Ads est inclus dans l'application pour tous les utilisateurs et effectue une vérification du statut de consentement au démarrage. Cette vérification transmet des identifiants d'appareil, votre adresse IP et l'identifiant de l'application à Google.</p>
+      <p>Google agit en tant que responsable du traitement indépendant pour les données qu'il collecte via AdMob. La politique de confidentialité de Google est disponible à l'adresse <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
     </div>
     <div class="card">
-      <h2>11. Contact</h2>
+      <h2>11. Modifications</h2>
+      <p>En cas de modifications importantes apportées à cette politique, une invite s'affichera dans l'application pour vous demander de consulter et d'accepter la version mise à jour avant de pouvoir continuer à utiliser l'application. La date en haut indique la dernière mise à jour.</p>
+    </div>
+    <div class="card">
+      <h2>12. Contact</h2>
       <div class="contact-box">
         <p><strong>Support NutriTrace</strong><br>E-mail : <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
       </div>
@@ -242,7 +287,7 @@
 
   <!-- ═══ العربية ═══ -->
   <div class="lang-panel" data-lang="ar">
-    <div class="effective">تاريخ السريان: 1 مايو 2026</div>
+    <div class="effective">تاريخ السريان: 29 أغسطس 2026</div>
     <div class="card">
       <h1>سياسة الخصوصية</h1>
       <p class="intro">تلتزم NutriTrace («نحن») بحماية بياناتك الشخصية وفق اللائحة العامة لحماية البيانات (GDPR). المتحكم في البيانات: Alexandre Zanaty — <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
@@ -271,10 +316,11 @@
       <h2>٣. الخدمات الخارجية</h2>
       <ul>
         <li><strong>Supabase</strong> – قاعدة البيانات والمصادقة والتخزين. خوادم الاتحاد الأوروبي.</li>
-        <li><strong>Anthropic Claude API</strong> – توليد الوصفات ومسح الوجبات. معالجة عابرة، لا تُستخدم للتدريب.</li>
-        <li><strong>RevenueCat</strong> – إدارة الاشتراكات والمشتريات.</li>
+        <li><strong>Anthropic Claude API</strong> – توليد الوصفات وتحليل الوجبات. معالجة عابرة، لا تُستخدم للتدريب. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></li>
+        <li><strong>RevenueCat</strong> – إدارة الاشتراكات والمشتريات داخل التطبيق. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></li>
         <li><strong>Apple Inc.</strong> – App Store وApple Sign-In والمشتريات.</li>
-        <li><strong>Google LLC</strong> – Google Sign-In.</li>
+        <li><strong>Google LLC</strong> – Google Sign-In. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        <li><strong>Google AdMob</strong> (Google Ireland Limited) – عرض الإعلانات للحسابات المجانية وحسابات الضيف. قد يتم جمع معرّفات إعلانية ومعلومات الجهاز وموقع مشتق من عنوان IP وبيانات التفاعل مع الإعلانات. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a></li>
       </ul>
       <p>لا نبيع بياناتك لأي طرف ثالث.</p>
     </div>
@@ -311,11 +357,31 @@
       <p>على iOS 14+، نطلب إذن ATT. عند الرفض، يعمل التطبيق بالكامل. قابل للتغيير في الإعدادات ← الخصوصية ← التتبع.</p>
     </div>
     <div class="card">
-      <h2>١٠. التغييرات على هذه السياسة</h2>
-      <p>التغييرات الجوهرية تُبلَّغ عبر إشعار داخل التطبيق. التاريخ أعلاه يُشير إلى آخر تحديث.</p>
+      <h2>١٠. الإعلانات والموافقة</h2>
+      <p>تعرض النسخة المجانية من NutriTrace إعلانات مقدَّمة من Google AdMob (Google Ireland Limited). لعرض الإعلانات، يجمع SDK Google Mobile Ads البيانات التالية ويرسلها إلى Google:</p>
+      <ul>
+        <li>معرّفات إعلانية للجهاز (IDFA على iOS)</li>
+        <li>معلومات الجهاز: الطراز وإصدار نظام التشغيل وحجم الشاشة واللغة والمنطقة الزمنية</li>
+        <li>عنوان IP الخاص بك، المستخدم لتحديد موقعك التقريبي على مستوى الدولة أو المدينة</li>
+        <li>معرّف التطبيق وإصداره</li>
+        <li>بيانات التفاعل مع الإعلانات: ما إذا كان الإعلان قد عُرض أو شوهد أو نُقر عليه</li>
+        <li>معلومات الشبكة: نوع الاتصال والمشغّل</li>
+      </ul>
+      <p><strong>الإعلانات المخصَّصة وغير المخصَّصة</strong></p>
+      <p>إذا وافقت على الإعلانات المخصَّصة، فقد يستخدم Google معرّفك الإعلاني لإنشاء ملف اهتمامات عبر التطبيقات وعرض إعلانات مبنية على هذا الملف.</p>
+      <p>إذا رفضت، تُعرض الإعلانات على أساس سياقي فقط. يُرجى ملاحظة أن الفئات المدرجة أعلاه لا تزال تُجمع وتُرسل إلى Google؛ ما يتغير هو أن معرّفك الإعلاني لم يعد يُستخدم للتنميط أو الاستهداف عبر التطبيقات. قد يواصل Google استخدام بيانات معرّف محدودة لأغراض منع الاحتيال وتحديد تكرار العرض داخل هذا التطبيق وإعداد التقارير المجمَّعة.</p>
+      <p><strong>إدارة اختياراتك</strong></p>
+      <p>يُعرض على المستخدمين المقيمين في المنطقة الاقتصادية الأوروبية نموذج موافقة Google عند الإطلاق الأول للتطبيق، ويمكنهم مراجعة اختياراتهم أو تغييرها في أي وقت عبر الملف الشخصي ← تفضيلات الإعلانات. يمكن للمستخدمين خارج المنطقة الاقتصادية الأوروبية إدارة تتبع الإعلانات من خلال إعدادات أجهزتهم (iOS: الإعدادات ← الخصوصية والأمان ← التتبع).</p>
+      <p><strong>مشتركو Premium</strong></p>
+      <p>لا يظهر للمشتركين في خطة Premium أي إعلانات، ولا تُرسَل أي طلبات إعلانية لحساباتهم. غير أن SDK Google Mobile Ads مدرج في التطبيق لجميع المستخدمين ويُجري فحصاً لحالة الموافقة عند بدء تشغيل التطبيق. يُرسل هذا الفحص معرّفات الجهاز وعنوان IP الخاص بك ومعرّف التطبيق إلى Google.</p>
+      <p>يعمل Google بوصفه مسؤولاً مستقلاً عن معالجة البيانات التي يجمعها عبر AdMob. سياسة خصوصية Google متاحة على <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
     </div>
     <div class="card">
-      <h2>١١. تواصل معنا</h2>
+      <h2>١١. التغييرات على هذه السياسة</h2>
+      <p>في حال إجراء تغييرات جوهرية على هذه السياسة، ستظهر لك رسالة داخل التطبيق تطلب منك مراجعة النسخة المحدَّثة والموافقة عليها قبل مواصلة استخدام التطبيق. التاريخ أعلاه يُشير إلى آخر تحديث.</p>
+    </div>
+    <div class="card">
+      <h2>١٢. تواصل معنا</h2>
       <div class="contact-box">
         <p><strong>دعم NutriTrace</strong><br>البريد الإلكتروني: <a href="mailto:support@nutritrace.app">support@nutritrace.app</a></p>
       </div>
